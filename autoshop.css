@@ -219,15 +219,18 @@ h2 .red { color: var(--red); }
 .card:hover .card-arrow { opacity: 1; transform: translateX(0); }
 
 /* Brands */
-.brands { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.brands { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 8px; }
+.brands .brand-logo { aspect-ratio: 3 / 2; }
+@media (min-width: 500px) { .brands { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 720px) { .brands { grid-template-columns: repeat(5, 1fr); } }
 .brand-pill { border: 2px solid var(--black); padding: 10px 18px; font-weight: 800; letter-spacing: 0.5px; display: inline-block; }
 .brand-pill.partner { background: var(--black); color: var(--white); border-color: var(--black); }
 .brand-pill.partner b { color: var(--red); }
 .motor .brand-pill { border-color: rgba(255,255,255,0.35); color: var(--white); }
 .brand-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 18px 0 28px; }
 .brand-badge { height: 40px; width: auto; border-radius: 3px; }
-.brand-logo { margin: 0; background: var(--white); border: 1px solid #e2e2e2; padding: 16px 20px; display: flex; align-items: center; justify-content: center; min-width: 140px; }
-.brand-logo img { height: 64px; width: auto; max-width: 100%; }
+.brand-logo { margin: 0; background: var(--white); border: 1px solid #e2e2e2; padding: 16px 20px; display: flex; align-items: center; justify-content: center; }
+.brand-logo img { max-width: 100%; max-height: 64px; width: auto; height: auto; }
 .partner-note { margin-top: 14px; font-size: 14px; color: var(--muted); }
 
 /* Dark journal sections (Imports, Motorsport) share this base, each gets its own accent below */
@@ -270,7 +273,7 @@ h2 .red { color: var(--red); }
 .photo-header::before {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 0%, transparent 40%, rgba(17,17,17,0.88) 82%, var(--black) 100%);
+  background: linear-gradient(180deg, transparent 0%, transparent 25%, rgba(17,17,17,0.55) 55%, rgba(17,17,17,0.94) 78%, var(--black) 100%);
   pointer-events: none;
 }
 .photo-header .wrap { position: relative; z-index: 1; padding-bottom: 26px; }
@@ -287,6 +290,8 @@ h2 .red { color: var(--red); }
   pointer-events: none;
 }
 .brand-row-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: #9a9a9a; margin: 0; }
+
+.revo-logo-badge { background: var(--white); padding: 14px 24px; height: 72px; width: auto; margin: 4px 0 28px; }
 
 /* Tuning: a steel-blue glow accent, so three dark sections in a row each read differently */
 #tuning::after {

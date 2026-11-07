@@ -1,24 +1,22 @@
-# AriAutohandel Website
+# Auto Shop (autoshop.com.gr)
 
-Static website for AriAutohandel (Aristeidis Dikefalos, Deuerling). Plain HTML and CSS, no build step and no paid services.
+Website for Auto Shop, owned by Ευστάθιος Λιάγκουρας, Αργυρούπολη (Athens), Greece.
 
-## Files
+- **Domain:** autoshop.com.gr
+- **Services:** car spare parts (Ανταλλακτικά), car sales (Πωλήσεις Αυτοκινήτων), tuning, car imports
+- **Focus brands:** Volkswagen, Audi, SEAT, Škoda
+- **Partner:** REVO authorised representative (Εξουσιοδοτημένος Αντιπρόσωπος)
+- **Address:** Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452
+- **Phone:** 210 9625851 (landline), 6944 38 47 59 (mobile)
+- **Email:** autoshop.gr@gmail.com
+- **Languages:** Greek and English
 
-- `index.html` – start page: hero, vehicles, about, contact
-- `impressum.html` – legal notice (Impressum)
-- `style.css` – all styling, light and dark mode
-- `images/logo.png` – logo
+## Status
 
-## Before going live
+The current files in this folder are an old static HTML prototype with placeholder content (German, Deuerling address). The site is being rebuilt as WordPress (Astra theme, Polylang for Greek and English), so the owner can edit everything without code. These files are kept as a reference only.
 
-1. Replace the placeholder vehicle card in `index.html` with real cars, or link to mobile.de only.
-2. Replace `kontakt@example.com` in `index.html` and `impressum.html` with the real e-mail address.
-3. Have the Impressum checked, since it is legally required in Germany.
+## Still to do before launch
 
-## Preview locally
-
-Open `index.html` in a browser, or use the VS Code extension **Live Server**.
-
-## Free hosting options
-
-GitHub Pages or Netlify (free tier) can host the folder as-is.
+1. Build the WordPress site with the Greek and English pages.
+2. Add the legal page: ΑΦΜ, ΔΟΥ, GEMI number (if applicable), legal form, privacy policy, cookie notice, terms.
+3. Check that the REVO and manufacturer logos are used as the partnership allows.

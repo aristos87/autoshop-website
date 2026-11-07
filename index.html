@@ -31,7 +31,7 @@
     <span class="wordmark">Auto<span>Shop</span></span>
     <span class="owner-tag">ΕΥΣΤΑΘΙΟΣ ΛΙΑΓΚΟΥΡΑΣ</span>
   </a>
-  <nav class="main">
+  <nav class="main" id="mainNav">
     <a href="#services" data-i18n="navServices">Υπηρεσίες</a>
     <a href="#parts" data-i18n="navParts">Ανταλλακτικά</a>
     <a href="#tuning" data-i18n="navTuning">Tuning</a>
@@ -39,7 +39,12 @@
     <a href="#motorsport" data-i18n="navMotorsport">Motorsport</a>
     <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
   </nav>
-  <button class="lang" type="button" id="langToggle" aria-label="Change language">EN</button>
+  <div class="header-actions">
+    <button class="lang" type="button" id="langToggle" aria-label="Change language">EN</button>
+    <button class="nav-toggle" type="button" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </div></header>
 
 <main id="top">
@@ -421,7 +426,7 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" })
+      }, { threshold: 0.01, rootMargin: "0px 0px 200px 0px" })
     : null;
   function observeReveal(root) {
     var els = root.querySelectorAll(".reveal");
@@ -583,6 +588,20 @@
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  // mobile hamburger nav
+  var navToggle = document.getElementById("navToggle");
+  var mainNav = document.getElementById("mainNav");
+  navToggle.addEventListener("click", function () {
+    var open = mainNav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  mainNav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      mainNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 </script>
 
 </body>

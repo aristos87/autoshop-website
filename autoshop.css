@@ -1,0 +1,462 @@
+/* Auto Shop - colors taken from the visiting card */
+:root {
+  --red: #d7141a;
+  --red-dark: #a80f14;
+  --black: #111111;
+  --white: #ffffff;
+  --grey: #f3f3f3;
+  --text: #1d1d1d;
+  --muted: #5c5c5c;
+}
+
+* { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* stop iOS Safari auto-inflating text size in landscape, which otherwise
+     silently breaks the layout without any visible CSS cause */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { width: min(1100px, 100% - 32px); margin: 0 auto; }
+
+/* Top bar */
+.topbar { background: var(--black); color: var(--white); font-size: 14px; }
+.topbar .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; padding: 8px 0; }
+.topbar a { text-decoration: none; }
+
+/* Header */
+header.site {
+  background: var(--white);
+  border-bottom: 4px solid var(--red);
+  position: sticky; top: 0; z-index: 10;
+  transition: box-shadow 0.25s ease, padding 0.25s ease;
+}
+header.site.is-scrolled { box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+.wordmark { font-weight: 900; font-style: italic; font-size: 26px; text-decoration: none; letter-spacing: -0.5px; }
+.wordmark span { color: var(--red); }
+.brand-block { display: flex; flex-direction: column; line-height: 1; text-decoration: none; gap: 3px; }
+.owner-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--muted); }
+
+nav.main { display: flex; gap: 22px; flex-wrap: wrap; font-weight: 600; font-size: 15px; }
+nav.main a {
+  position: relative;
+  text-decoration: none;
+  padding: 4px 2px;
+  transition: color 0.2s ease;
+}
+/* Audi Sport style: a small red parallelogram slides in on hover, underline grows from center */
+nav.main a::before {
+  content: "";
+  position: absolute;
+  left: -14px; top: 50%;
+  width: 7px; height: 13px;
+  background: var(--red);
+  transform: translateY(-50%) skewX(-18deg) scaleY(0);
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+nav.main a::after {
+  content: "";
+  position: absolute;
+  left: 50%; right: 50%; bottom: -4px;
+  height: 2px;
+  background: var(--red);
+  transition: left 0.22s ease, right 0.22s ease;
+}
+nav.main a:hover { color: var(--red); }
+nav.main a:hover::before { transform: translateY(-50%) skewX(-18deg) scaleY(1); }
+nav.main a:hover::after { left: 0; right: 0; }
+
+.lang {
+  font-weight: 700; font-size: 14px; text-decoration: none;
+  border: 2px solid var(--black); padding: 4px 10px;
+  background: var(--white); cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.lang:hover { background: var(--red); color: var(--white); border-color: var(--red); }
+
+/* Audi-Sport-style red parallelogram mark, auto-prepended to every section heading.
+   Implemented as ::before so it survives the language-switch script replacing h2 text. */
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 13px; height: 0.72em;
+  background: var(--red);
+  transform: skewX(-18deg);
+  margin-right: 12px;
+  vertical-align: -0.08em;
+}
+
+/* Hero with checkered flag */
+.hero {
+  position: relative;
+  background: var(--black);
+  color: var(--white);
+  padding: 72px 0 96px;
+  overflow: hidden;
+  /* Audi RS6 studio photo, darkened with a gradient so the headline stays readable */
+  background-image:
+    linear-gradient(100deg, rgba(17,17,17,0.94) 0%, rgba(17,17,17,0.55) 48%, rgba(17,17,17,0.88) 100%),
+    linear-gradient(180deg, rgba(17,17,17,0.15) 0%, rgba(17,17,17,0.9) 100%),
+    url("images/hero/rs6-studio.jpg");
+  background-size: cover;
+  background-position: center 68%;
+  background-repeat: no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 26px;
+  background:
+    repeating-conic-gradient(var(--white) 0% 25%, var(--black) 0% 50%) 0 0 / 26px 26px;
+  opacity: 0.12;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 0;
+  bottom: 0;
+  width: 42%;
+  background: var(--red);
+  transform: skewX(-14deg);
+  opacity: 0.95;
+}
+
+/* diagonal divider: carries the hero's black down into the next section at an angle */
+.diag-divider { position: relative; height: 54px; overflow: hidden; background: var(--white); }
+.diag-divider::before {
+  content: "";
+  position: absolute;
+  left: -5%; right: -5%; top: 0; height: 100%;
+  background: var(--black);
+  transform-origin: top left;
+  transform: skewY(-2.4deg);
+}
+.hero .wrap { position: relative; z-index: 1; max-width: 1100px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 13px; color: #ffb3b5; font-weight: 700; margin: 0 0 12px; }
+.hero h1 { font-size: clamp(44px, 9vw, 84px); font-style: italic; font-weight: 900; line-height: 1; margin: 0 0 16px; }
+.hero h1 span { color: var(--red); }
+.hero p.lead { font-size: clamp(17px, 2.4vw, 20px); max-width: 560px; margin: 0 0 28px; color: #e8e8e8; }
+.btn { display: inline-block; padding: 14px 24px; font-weight: 700; text-decoration: none; margin: 0 10px 10px 0; }
+.btn-red { background: var(--red); color: var(--white); }
+.btn-red:hover { background: var(--red-dark); }
+.btn-line { border: 2px solid var(--white); color: var(--white); }
+.btn-line:hover { background: var(--white); color: var(--black); }
+
+/* Sections */
+section { padding: 64px 0; }
+section.alt { background: var(--grey); }
+h2 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 900; font-style: italic; margin: 0 0 12px; line-height: 1.1; }
+h2 .red { color: var(--red); }
+.section-intro { color: var(--muted); max-width: 640px; margin: 0 0 36px; }
+
+.section-split { margin-top: 56px; padding-top: 48px; }
+
+/* Services grid: each card is a link into its own section (or Contact), never a dead end */
+.grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+.card {
+  display: block;
+  background: var(--white);
+  border-top: 5px solid var(--red);
+  padding: 24px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 16px 28px rgba(0,0,0,0.14); }
+.card h3 { margin: 0 0 8px; font-size: 20px; font-weight: 800; display: flex; align-items: center; }
+.card h3::before {
+  content: "";
+  display: inline-block;
+  width: 10px; height: 0.8em;
+  background: var(--red);
+  transform: skewX(-18deg);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.card p { margin: 0 24px 0 0; color: var(--muted); }
+.card-arrow {
+  position: absolute; right: 20px; bottom: 20px;
+  color: var(--red); font-weight: 900; font-size: 18px;
+  opacity: 0; transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.card:hover .card-arrow { opacity: 1; transform: translateX(0); }
+
+/* Brands */
+.brands { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.brand-pill { border: 2px solid var(--black); padding: 10px 18px; font-weight: 800; letter-spacing: 0.5px; display: inline-block; }
+.brand-pill.partner { background: var(--black); color: var(--white); border-color: var(--black); }
+.brand-pill.partner b { color: var(--red); }
+.motor .brand-pill { border-color: rgba(255,255,255,0.35); color: var(--white); }
+.brand-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 18px 0 28px; }
+.brand-badge { height: 40px; width: auto; border-radius: 3px; }
+.brand-logo { margin: 0; background: var(--white); border: 1px solid #e2e2e2; padding: 16px 20px; display: flex; align-items: center; justify-content: center; min-width: 140px; }
+.brand-logo img { height: 64px; width: auto; max-width: 100%; }
+.partner-note { margin-top: 14px; font-size: 14px; color: var(--muted); }
+
+/* Dark journal sections (Imports, Motorsport) share this base, each gets its own accent below */
+.motor {
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+  background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 48px);
+}
+.motor h2 { color: var(--white); }
+.motor .section-intro { color: #cfcfcf; }
+.motor .card { background: #1d1d1d; color: var(--white); border-top-color: var(--white); }
+.motor .card p { color: #bdbdbd; }
+.motor .wrap { position: relative; z-index: 1; }
+
+/* Imports: a warm amber glow accent (journey/road feel), distinct from Motorsport's red.
+   The real trip photo is shown as a plain, uncropped banner instead (see .motor-banner) so nothing gets cut off. */
+#imports::after {
+  content: "";
+  position: absolute;
+  width: 560px; height: 560px;
+  bottom: -160px; left: -160px;
+  background: radial-gradient(circle, rgba(215,150,20,0.22), transparent 70%);
+  pointer-events: none;
+}
+
+/* Photo header band: the real trip/event photo shown in FULL (contain, never cropped),
+   with the section title and intro docked at the bottom over a gradient for legibility. */
+.photo-header {
+  position: relative;
+  min-height: clamp(360px, 48vw, 980px);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: var(--black);
+  display: flex;
+  align-items: flex-end;
+}
+.photo-header::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 0%, transparent 40%, rgba(17,17,17,0.88) 82%, var(--black) 100%);
+  pointer-events: none;
+}
+.photo-header .wrap { position: relative; z-index: 1; padding-bottom: 26px; }
+.photo-header h2, .photo-header .section-intro { margin-bottom: 0; }
+.photo-header h2 { margin-bottom: 10px; }
+
+/* Spare Parts: a green glow accent (genuine/certified feel) */
+#parts::after {
+  content: "";
+  position: absolute;
+  width: 560px; height: 560px;
+  bottom: -160px; right: -160px;
+  background: radial-gradient(circle, rgba(70,190,120,0.22), transparent 70%);
+  pointer-events: none;
+}
+.brand-row-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: #9a9a9a; margin: 0; }
+
+/* Tuning: a steel-blue glow accent, so three dark sections in a row each read differently */
+#tuning::after {
+  content: "";
+  position: absolute;
+  width: 560px; height: 560px;
+  top: -160px; left: -160px;
+  background: radial-gradient(circle, rgba(70,140,215,0.22), transparent 70%);
+  pointer-events: none;
+}
+
+/* Motorsport: a red glow accent, opposite corner, so the two sections read differently */
+#motorsport::after {
+  content: "";
+  position: absolute;
+  width: 560px; height: 560px;
+  top: -160px; right: -160px;
+  background: radial-gradient(circle, rgba(215,20,26,0.28), transparent 70%);
+  pointer-events: none;
+}
+
+/* seam between the two dark sections so they don't visually merge into one black block */
+.seam-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  opacity: 0.65;
+}
+
+/* story banner + article + gallery (used inside story-carousel slides) */
+.motor-banner { width: 100%; border: 1px solid #2a2a2a; margin-bottom: 36px; }
+/* real trip/product photos sit smaller and framed, instead of dominating the section like a graphic hero */
+.motor-banner.photo {
+  width: auto; max-width: 420px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.14);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.55);
+}
+@media (max-width: 719px) {
+  .motor-banner.photo { max-width: 100%; }
+}
+.motor-article { max-width: 760px; margin: 0 0 40px; }
+.motor-article h3 { font-size: 24px; font-weight: 900; font-style: italic; margin: 0 0 10px; }
+.motor-article p { color: #d8d8d8; margin: 0 0 14px; }
+.motor-note { font-size: 13px; color: #9a9a9a; border-left: 3px solid var(--red); padding-left: 12px; margin-top: 24px; }
+.motor-article h4 { font-size: 19px; font-weight: 900; font-style: italic; margin: 30px 0 14px; }
+
+/* numbered process steps */
+.story-steps { display: grid; gap: 14px; grid-template-columns: 1fr; margin: 0 0 8px; max-width: 760px; }
+.story-step { background: rgba(255,255,255,0.045); border-left: 3px solid var(--red); padding: 14px 18px; }
+.story-step .step-num { color: var(--red); font-weight: 900; font-size: 12px; letter-spacing: 1.5px; }
+.story-step h5 { margin: 4px 0 6px; font-size: 16px; font-weight: 800; color: var(--white); }
+.story-step p { margin: 0; color: #c4c4c4; font-size: 14.5px; }
+@media (min-width: 720px) { .story-steps { grid-template-columns: repeat(2, 1fr); } }
+
+/* "why choose us" checklist */
+.story-why { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 10px; max-width: 760px; }
+.story-why li { position: relative; padding-left: 24px; color: #d2d2d2; font-size: 15px; }
+.story-why li::before { content: "✓"; position: absolute; left: 0; color: var(--red); font-weight: 900; }
+.story-why b { color: var(--white); }
+
+/* closing statement + CTA */
+.story-closing { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); max-width: 760px; }
+.story-closing p { color: #d8d8d8; margin: 0 0 10px; }
+.story-closing .closing-line { font-weight: 800; font-style: italic; color: var(--white); margin: 14px 0 20px; }
+.story-cta { display: inline-block; background: var(--red); color: var(--white); font-weight: 700; padding: 13px 24px; text-decoration: none; }
+.story-cta:hover { background: var(--red-dark); }
+.gallery-title { font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 16px; color: #d8d8d8; }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.gallery-slot {
+  aspect-ratio: 4 / 3;
+  border: 2px dashed #3a3a3a;
+  background: #1a1a1a;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 12px;
+  color: #6e6e6e; font-size: 13px; font-weight: 600;
+}
+.gallery-slot.has-photo { border: 2px solid var(--red); padding: 0; overflow: hidden; }
+.gallery-slot.has-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (min-width: 720px) {
+  .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* swipeable story carousel: used for Motorsport and Imports journal sections */
+.story-carousel { position: relative; padding: 0 2px; }
+.story-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.story-track::-webkit-scrollbar { display: none; height: 0; }
+.story-slide { flex: 0 0 100%; scroll-snap-align: start; min-width: 0; }
+.story-nav {
+  position: absolute;
+  top: 96px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(255,255,255,0.35);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 3;
+}
+.story-nav:hover { background: var(--red); border-color: var(--red); }
+.story-nav.prev { left: -4px; }
+.story-nav.next { right: -4px; }
+.story-dots { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
+.story-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #4a4a4a; border: none; padding: 0; cursor: pointer;
+  transition: all 0.2s ease;
+}
+.story-dot.active { background: var(--red); width: 24px; border-radius: 5px; }
+@media (max-width: 719px) {
+  .story-nav { width: 40px; height: 40px; top: 70px; }
+  .story-nav.prev { left: -4px; }
+  .story-nav.next { right: -4px; }
+}
+
+/* Contact */
+.contact-grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { padding: 14px 0; border-bottom: 1px solid #e2e2e2; }
+.contact-list small { display: block; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.contact-list a { font-weight: 700; font-size: 18px; text-decoration: none; }
+.contact-list a:hover { color: var(--red); }
+
+footer { background: var(--black); color: #bdbdbd; padding: 32px 0; font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+footer .wordmark { color: var(--white); font-size: 20px; }
+footer .todo { color: #ffb3b5; }
+
+/* Tablet and up */
+@media (min-width: 720px) {
+  .grid.four { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1000px) {
+  .grid.four { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Fixed social side panel */
+.social-panel {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+.social-panel a {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.2s ease, width 0.2s ease;
+}
+.social-panel a:first-child { border-top-left-radius: 6px; }
+.social-panel a:last-child { border-bottom-left-radius: 6px; border-bottom: none; }
+.social-panel a:hover { background: var(--red); width: 50px; }
+.social-panel svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+@media (max-width: 719px) {
+  .social-panel { top: auto; bottom: 0; transform: none; flex-direction: row; right: 12px; }
+  .social-panel a { width: 40px; height: 40px; border-bottom: none; border-right: 1px solid rgba(255,255,255,0.15); }
+  .social-panel a:first-child { border-radius: 6px 0 0 0; }
+  .social-panel a:last-child { border-radius: 0 6px 0 0; border-right: none; }
+}
+
+/* Scroll-reveal: elements fade/slide in as they enter the viewport */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Phone: keep nav usable and avoid horizontal scroll */
+@media (max-width: 719px) {
+  header.site .wrap { flex-wrap: wrap; }
+  nav.main { width: 100%; justify-content: space-between; gap: 10px; font-size: 14px; }
+  .hero { padding: 48px 0 72px; }
+  .hero::after { width: 30%; right: -80px; opacity: 0.5; }
+  section { padding: 48px 0; }
+  .btn { display: block; text-align: center; margin: 0 0 12px; }
+}

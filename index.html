@@ -1,29 +1,589 @@
 <!doctype html>
-<html lang="de">
+<html lang="el">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AriAutohandel – persönliche Gebrauchtwagenberatung in Deuerling.">
-  <title>AriAutohandel | Gebrauchtwagen in Deuerling</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="color.css">
+  <meta name="description" content="Auto Shop, Αργυρούπολη: ανταλλακτικά, πωλήσεις αυτοκινήτων, tuning και εισαγωγές. Εξειδίκευση σε VW, Audi, SEAT και Škoda. | Auto Shop, Argyroupoli: spare parts, car sales, tuning and imports.">
+  <title>Auto Shop | Ανταλλακτικά & Πωλήσεις Αυτοκινήτων</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap&subset=greek,latin" rel="stylesheet">
+  <link rel="stylesheet" href="autoshop.css">
 </head>
 <body>
-  <div class="topline"><div class="wrap"><span>Persönliche Beratung in Deuerling</span><a href="tel:+4917661372842">+49 176 61372842</a></div></div>
-  <header><div class="wrap nav"><a class="logo" href="#start"><img src="images/logo.png" alt="AriAutohandel"></a><nav><a href="#fahrzeuge">Fahrzeuge</a><a href="#service">Service</a><a href="#kontakt">Kontakt</a></nav><a class="call" href="tel:+4917661372842">Anrufen <b>↗</b></a></div></header>
-  <main id="start">
-    <section class="hero">
-      <img src="images/hero-car.png" alt="Sportlicher Gebrauchtwagen auf einem Vorplatz">
-      <div class="veil"></div>
-      <div class="wrap hero-copy"><p class="tag">ARI AUTOHANDEL · DEUERLING</p><h1>Gute Autos.<br><i>Ehrlich verkauft.</i></h1><p>Gebrauchtwagen mit persönlicher Beratung, klaren Antworten und Zeit für deine Entscheidung.</p><div class="actions"><a class="primary" href="#fahrzeuge">Fahrzeuge ansehen <b>↓</b></a><a class="under" href="#kontakt">Termin vereinbaren <b>→</b></a></div></div>
-      <div class="hero-line" aria-hidden="true"></div>
-    </section>
-    <section class="facts"><div class="wrap"><article><b>Persönlich</b><span>Du sprichst direkt mit mir.</span></article><article><b>Transparent</b><span>Klare Infos zu jedem Auto.</span></article><article><b>Ohne Druck</b><span>In Ruhe anschauen &amp; probefahren.</span></article></div></section>
-    <section id="fahrzeuge" class="wrap inventory"><div class="intro"><div><p class="tag dark">FAHRZEUGBESTAND</p><h2>Finde dein nächstes Auto.</h2></div><p>Die aktuellen Fahrzeuge und alle Details findest du direkt auf meinem mobile.de-Profil.</p></div><a class="mobile-card" href="https://home.mobile.de/ARIAUTOHANDEL" target="_blank" rel="noopener"><div><span>Aktuelle Angebote</span><h3>Alle Fahrzeuge<br>auf mobile.de</h3><p>Jetzt Bestand ansehen <b>↗</b></p></div><div class="mobile-arrow">→</div></a><p class="note">Fotos und Ausstattungsdetails werden laufend auf mobile.de aktualisiert.</p></section>
-    <section id="service" class="about"><div class="wrap about-grid"><div class="mark" aria-hidden="true">⌁</div><div><p class="tag">WARUM ARI AUTOHANDEL</p><h2>Autokauf darf<br><i>einfach</i> sein.</h2><p class="body-copy">Kein großer Autohof, keine Verkaufsshow. Dafür ein ehrliches Gespräch, eine entspannte Besichtigung und ein Auto, das zu dir passt.</p><a class="under light" href="#kontakt">Kontakt aufnehmen <b>→</b></a></div></div></section>
-    <section class="wrap steps"><p class="tag dark">SO FUNKTIONIERT'S</p><h2>In drei einfachen Schritten.</h2><div class="step-grid"><article><span>01</span><h3>Anrufen</h3><p>Ruf an oder schreib mir. Wir finden einen Termin, der passt.</p></article><article><span>02</span><h3>Besichtigen</h3><p>Schau dir das Auto ohne Hektik an und mach eine Probefahrt.</p></article><article><span>03</span><h3>Losfahren</h3><p>Wenn alles stimmt, kümmern wir uns um eine unkomplizierte Übergabe.</p></article></div></section>
-    <section id="kontakt" class="contact"><div class="wrap contact-grid"><div><p class="tag dark">KONTAKT</p><h2>Bereit für<br>dein <i>nächstes Auto?</i></h2></div><div class="details"><a class="phone" href="tel:+4917661372842">+49 176 61372842</a><a href="mailto:kontakt@example.com">kontakt@example.com</a><address>Pfarrerhöhe 29<br>93180 Deuerling</address><a class="under" href="https://www.google.com/maps/search/?api=1&amp;query=Pfarrerh%C3%B6he+29+93180+Deuerling" target="_blank" rel="noopener">Route planen <b>↗</b></a></div></div></section>
-  </main>
-  <footer><div class="wrap"><img src="images/logo.png" alt="AriAutohandel"><span>© 2026 AriAutohandel</span><a href="impressum.html">Impressum</a></div></footer>
+
+<nav class="social-panel" aria-label="Social media">
+  <a href="https://www.facebook.com/autoshop.com.gr/" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94"/></svg>
+  </a>
+  <a href="https://www.instagram.com/autoshop_revo.authoriseddealer/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.8.31-1.46.72-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.46 1.38 2.13.66.66 1.33 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.8-.31 1.46-.72 2.13-1.38.66-.66 1.07-1.33 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+  </a>
+</nav>
+
+<div class="topbar"><div class="wrap">
+  <span data-i18n="topAddress">Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452</span>
+  <span><a href="tel:+302109625851">210 9625851</a> · <a href="tel:+306943847559">6944 38 47 59</a></span>
+</div></div>
+
+<header class="site"><div class="wrap">
+  <a class="brand-block" href="#top">
+    <span class="wordmark">Auto<span>Shop</span></span>
+    <span class="owner-tag">ΕΥΣΤΑΘΙΟΣ ΛΙΑΓΚΟΥΡΑΣ</span>
+  </a>
+  <nav class="main">
+    <a href="#services" data-i18n="navServices">Υπηρεσίες</a>
+    <a href="#parts" data-i18n="navParts">Ανταλλακτικά</a>
+    <a href="#tuning" data-i18n="navTuning">Tuning</a>
+    <a href="#imports" data-i18n="navImports">Εισαγωγές</a>
+    <a href="#motorsport" data-i18n="navMotorsport">Motorsport</a>
+    <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
+  </nav>
+  <button class="lang" type="button" id="langToggle" aria-label="Change language">EN</button>
+</div></header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="heroEyebrow">Ανταλλακτικά · Πωλήσεις Αυτοκινήτων</p>
+      <h1>Auto<span>Shop</span></h1>
+      <p class="lead" data-i18n="heroLead">Ανταλλακτικά, tuning και εισαγωγές αυτοκινήτων, με εξειδίκευση στα μοντέλα του Volkswagen Group.</p>
+      <a class="btn btn-red" href="#contact" data-i18n="heroCta1">Επικοινωνία</a>
+      <a class="btn btn-line" href="#services" data-i18n="heroCta2">Οι υπηρεσίες μας</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 data-i18n-html="servicesTitle">Οι <span class="red">υπηρεσίες</span> μας</h2>
+      <p class="section-intro" data-i18n="servicesIntro">Όλα όσα χρειάζεται ένα αυτοκίνητο, από ένα ανταλλακτικό μέχρι το επόμενο όχημά σου.</p>
+      <div class="grid four">
+        <a class="card reveal" href="#parts"><h3 data-i18n="s1Title">Ανταλλακτικά</h3><p data-i18n="s1Text">Ανταλλακτικά για VW, Audi, SEAT και Škoda.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+        <a class="card reveal" href="#contact"><h3 data-i18n="s2Title">Πωλήσεις</h3><p data-i18n="s2Text">Αυτοκίνητα προς πώληση. Επικοινώνησε μαζί μας για διαθέσιμα οχήματα.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+        <a class="card reveal" href="#tuning"><h3 data-i18n="s3Title">Tuning</h3><p data-i18n="s3Text">Επεμβάσεις απόδοσης σε συνεργασία με την REVO.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+        <a class="card reveal" href="#imports"><h3 data-i18n="s4Title">Εισαγωγές</h3><p data-i18n="s4Text">Φέρνουμε το αυτοκίνητο που θέλεις από το εξωτερικό.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="wrap section-split">
+      <h2 data-i18n-html="brandsTitle">Εξειδίκευση σε <span class="red">Volkswagen Group</span></h2>
+      <p class="section-intro" data-i18n="brandsIntro">Εξειδικευμένη εξυπηρέτηση για τα brands του ομίλου.</p>
+      <div class="brands">
+        <figure class="brand-logo reveal"><img src="images/brands/revo.png" alt="REVO – Εξουσιοδοτημένος Αντιπρόσωπος"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/volkswagen.png" alt="Volkswagen Motorsport"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/audi-sport.png" alt="Audi Sport"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/seat.png" alt="SEAT"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/skoda.png" alt="Škoda"></figure>
+      </div>
+      <p class="partner-note" data-i18n="revoNote">Η REVO είναι το εξουσιοδοτημένο tuning πρόγραμμα του κατασκευαστή.</p>
+    </div>
+  </section>
+
+  <section id="parts" class="motor">
+    <div class="wrap">
+      <h2 data-i18n-html="partsTitle">Ανταλλακτικά &amp; <span class="red">Αξεσουάρ</span></h2>
+      <p class="section-intro" data-i18n="partsIntro">Γνήσια ανταλλακτικά και αναγνωρισμένες μάρκες για VW, Audi, SEAT και Škoda.</p>
+      <p class="brand-row-label" data-i18n="partsBrandsLabel">Εργαζόμαστε με μάρκες όπως:</p>
+      <div class="brand-row">
+        <img class="brand-badge" src="images/parts/mann-filter.png" alt="MANN-FILTER">
+        <img class="brand-badge" src="images/parts/castrol.png" alt="Castrol">
+        <img class="brand-badge" src="images/parts/febi-bilstein.png" alt="febi bilstein">
+        <img class="brand-badge" src="images/parts/bilstein.png" alt="bilstein">
+        <img class="brand-badge" src="images/parts/bosch.png" alt="Bosch">
+        <img class="brand-badge" src="images/parts/ngk.png" alt="NGK">
+      </div>
+      <div class="story-carousel" id="partsCarousel">
+        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
+        <div class="story-track"></div>
+        <button class="story-nav next" type="button" aria-label="Next">›</button>
+        <div class="story-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam-line" aria-hidden="true"></div>
+
+  <section id="tuning" class="motor">
+    <div class="wrap">
+      <h2 data-i18n-html="tuningTitle">Tuning με <span class="red">REVO</span></h2>
+      <p class="section-intro" data-i18n="tuningIntro">Ως εξουσιοδοτημένος αντιπρόσωπος REVO, αναβαθμίζουμε την απόδοση του αυτοκινήτου σου με πιστοποιημένα προγράμματα.</p>
+      <div class="story-carousel" id="tuningCarousel">
+        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
+        <div class="story-track"></div>
+        <button class="story-nav next" type="button" aria-label="Next">›</button>
+        <div class="story-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam-line" aria-hidden="true"></div>
+
+  <section id="imports" class="motor">
+    <div class="photo-header" style="background-image:url('images/imports/trip-germany-01.jpg')">
+      <div class="wrap">
+        <h2 data-i18n-html="importsTitle">Εισαγωγές Αυτοκινήτων από <span class="red">Γερμανία &amp; Ευρώπη</span></h2>
+        <p class="section-intro" data-i18n="importsIntro">Το αυτοκίνητο που θέλεις. Χωρίς το άγχος της διαδικασίας.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="story-carousel" id="importsCarousel">
+        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
+        <div class="story-track"></div>
+        <button class="story-nav next" type="button" aria-label="Next">›</button>
+        <div class="story-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam-line" aria-hidden="true"></div>
+
+  <section id="motorsport" class="motor">
+    <div class="photo-header" style="background-image:url('images/motorsport/quattro-s1.jpg')">
+      <div class="wrap">
+        <h2 data-i18n-html="motorTitle">Από τις <span class="red">πίστες</span></h2>
+        <p class="section-intro" data-i18n="motorIntro">Η αγάπη για το motorsport μας οδηγεί σε αγώνες και εκδηλώσεις. Εδώ θα βρείτε τις ταξιδιωτικές μας ιστορίες με φωτογραφίες.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="story-carousel" id="motorsportCarousel">
+        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
+        <div class="story-track"></div>
+        <button class="story-nav next" type="button" aria-label="Next">›</button>
+        <div class="story-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid reveal">
+      <div>
+        <h2 data-i18n="contactTitle">Επικοινωνία</h2>
+        <p class="section-intro" data-i18n="contactIntro">Τηλεφώνησε ή στείλε μας email για ανταλλακτικά, πωλήσεις, tuning ή εισαγωγές.</p>
+      </div>
+      <ul class="contact-list">
+        <li><small data-i18n="lblAddress">Διεύθυνση</small><span data-i18n="addressValue">Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452</span></li>
+        <li><small data-i18n="lblPhone">Τηλέφωνο</small><a href="tel:+302109625851">210 9625851</a></li>
+        <li><small data-i18n="lblMobile">Κινητό</small><a href="tel:+306943847559">6944 38 47 59</a></li>
+        <li><small data-i18n="lblFax">Φαξ</small><span>210 9625851</span></li>
+        <li><small data-i18n="lblEmail">Email</small><a href="mailto:autoshop.gr@gmail.com">autoshop.gr@gmail.com</a></li>
+        <li><small data-i18n="lblHours">Ωράριο</small><span data-i18n-html="hoursValue">Δευτέρα–Παρασκευή 9:00 π.μ.–8:00 μ.μ.<br>Σάββατο 9:00 π.μ.–3:00 μ.μ.<br>Κυριακή Κλειστά</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap">
+  <a class="wordmark" href="#top">Auto<span>Shop</span></a>
+  <span data-i18n="footerOwner">© 2026 Auto Shop · Ευστάθιος Λιάγκουρας</span>
+</div></footer>
+
+<script>
+  // Greek is the default. Language can be forced with ?lang=en or ?lang=el,
+  // and the last choice on this device is remembered.
+  var T = {
+    el: {
+      topAddress: "Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452",
+      navServices: "Υπηρεσίες", navParts: "Ανταλλακτικά", navBrands: "Brands", navTuning: "Tuning", navImports: "Εισαγωγές", navMotorsport: "Motorsport", navContact: "Επικοινωνία",
+      heroEyebrow: "Ανταλλακτικά · Πωλήσεις Αυτοκινήτων",
+      heroLead: "Ανταλλακτικά, tuning και εισαγωγές αυτοκινήτων, με εξειδίκευση στα μοντέλα του Volkswagen Group.",
+      heroCta1: "Επικοινωνία", heroCta2: "Οι υπηρεσίες μας",
+      servicesTitle: 'Οι <span class="red">υπηρεσίες</span> μας',
+      servicesIntro: "Όλα όσα χρειάζεται ένα αυτοκίνητο, από ένα ανταλλακτικό μέχρι το επόμενο όχημά σου.",
+      s1Title: "Ανταλλακτικά", s1Text: "Ανταλλακτικά για VW, Audi, SEAT και Škoda.",
+      s2Title: "Πωλήσεις", s2Text: "Αυτοκίνητα προς πώληση. Επικοινώνησε μαζί μας για διαθέσιμα οχήματα.",
+      s3Title: "Tuning", s3Text: "Επεμβάσεις απόδοσης σε συνεργασία με την REVO.",
+      s4Title: "Εισαγωγές", s4Text: "Φέρνουμε το αυτοκίνητο που θέλεις από το εξωτερικό.",
+      brandsTitle: 'Εξειδίκευση σε <span class="red">Volkswagen Group</span>',
+      brandsIntro: "Εξειδικευμένη εξυπηρέτηση για τα brands του ομίλου.",
+      revoBadge: "· Εξουσιοδοτημένος Αντιπρόσωπος",
+      revoNote: "Η REVO είναι το εξουσιοδοτημένο tuning πρόγραμμα του κατασκευαστή.",
+      partsTitle: 'Ανταλλακτικά &amp; <span class="red">Αξεσουάρ</span>',
+      partsIntro: "Γνήσια ανταλλακτικά και αναγνωρισμένες μάρκες για VW, Audi, SEAT και Škoda.",
+      partsBrandsLabel: "Εργαζόμαστε με μάρκες όπως:",
+      tuningTitle: 'Tuning με <span class="red">REVO</span>',
+      tuningIntro: "Ως εξουσιοδοτημένος αντιπρόσωπος REVO, αναβαθμίζουμε την απόδοση του αυτοκινήτου σου με πιστοποιημένα προγράμματα.",
+      importsTitle: 'Εισαγωγές Αυτοκινήτων από <span class="red">Γερμανία &amp; Ευρώπη</span>',
+      importsIntro: "Το αυτοκίνητο που θέλεις. Χωρίς το άγχος της διαδικασίας.",
+      motorTitle: 'Από τις <span class="red">πίστες</span>',
+      motorIntro: "Η αγάπη για το motorsport μας οδηγεί σε αγώνες και εκδηλώσεις. Εδώ θα βρείτε τις ταξιδιωτικές μας ιστορίες με φωτογραφίες.",
+      galleryTitle: "Highlights από το ταξίδι", gallerySlot: "Φωτογραφία προς προσθήκη",
+      contactTitle: "Επικοινωνία",
+      contactIntro: "Τηλεφώνησε ή στείλε μας email για ανταλλακτικά, πωλήσεις, tuning ή εισαγωγές.",
+      lblAddress: "Διεύθυνση", addressValue: "Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452",
+      lblPhone: "Τηλέφωνο", lblMobile: "Κινητό", lblFax: "Φαξ", lblEmail: "Email",
+      lblHours: "Ωράριο", hoursValue: "Δευτέρα–Παρασκευή 9:00 π.μ.–8:00 μ.μ.<br>Σάββατο 9:00 π.μ.–3:00 μ.μ.<br>Κυριακή Κλειστά",
+      footerOwner: "© 2026 Auto Shop · Ευστάθιος Λιάγκουρας",
+      footerLegal: "[Νομικά στοιχεία: ΑΦΜ, ΔΟΥ, ΓΕΜΗ, προς προσθήκη]",
+      langButton: "EN", pageTitle: "Auto Shop | Ανταλλακτικά & Πωλήσεις Αυτοκινήτων"
+    },
+    en: {
+      topAddress: "Kyriakou Efstathiadi 32, Argyroupoli 16452, Athens",
+      navServices: "Services", navParts: "Spare Parts", navBrands: "Brands", navTuning: "Tuning", navImports: "Imports", navMotorsport: "Motorsport", navContact: "Contact",
+      heroEyebrow: "Spare Parts · Car Sales",
+      heroLead: "Spare parts, tuning and car imports, specialising in Volkswagen Group models.",
+      heroCta1: "Contact us", heroCta2: "Our services",
+      servicesTitle: 'Our <span class="red">services</span>',
+      servicesIntro: "Everything a car needs, from a single spare part to your next vehicle.",
+      s1Title: "Parts", s1Text: "Spare parts for VW, Audi, SEAT and Škoda.",
+      s2Title: "Sales", s2Text: "Cars for sale. Contact us for what is currently available.",
+      s3Title: "Tuning", s3Text: "Performance upgrades in cooperation with REVO.",
+      s4Title: "Imports", s4Text: "We bring the car you want from abroad.",
+      brandsTitle: 'Specialists in <span class="red">Volkswagen Group</span>',
+      brandsIntro: "Dedicated service for the group's brands.",
+      revoBadge: "· Authorised Representative",
+      revoNote: "REVO is the manufacturer-authorised tuning programme.",
+      partsTitle: 'Spare Parts &amp; <span class="red">Accessories</span>',
+      partsIntro: "Genuine spare parts and recognised brands for VW, Audi, SEAT and Škoda.",
+      partsBrandsLabel: "We work with brands such as:",
+      tuningTitle: 'Tuning with <span class="red">REVO</span>',
+      tuningIntro: "As an authorised REVO representative, we upgrade your car's performance with certified programmes.",
+      importsTitle: 'Car Imports from <span class="red">Germany &amp; Europe</span>',
+      importsIntro: "The car you want. Without the stress of the process.",
+      motorTitle: 'From the <span class="red">track</span>',
+      motorIntro: "Our passion for motorsport takes us to races and events. Here you will find our travel stories with photos.",
+      galleryTitle: "Highlights from the trip", gallerySlot: "Photo to be added",
+      contactTitle: "Contact",
+      contactIntro: "Call or email us about spare parts, sales, tuning or imports.",
+      lblAddress: "Address", addressValue: "Kyriakou Efstathiadi 32, Argyroupoli 16452, Athens",
+      lblPhone: "Phone", lblMobile: "Mobile", lblFax: "Fax", lblEmail: "Email",
+      lblHours: "Opening hours", hoursValue: "Monday–Friday 9:00 am–8:00 pm<br>Saturday 9:00 am–3:00 pm<br>Sunday Closed",
+      footerOwner: "© 2026 Auto Shop · Evstathios Liagkouras",
+      footerLegal: "[Legal details: VAT no., tax office, GEMI no., to be added]",
+      langButton: "EL", pageTitle: "Auto Shop | Spare Parts & Car Sales, Athens"
+    }
+  };
+
+  // Journal stories for the swipeable carousels. Add more entries to either
+  // array (keeping el/en in sync, same order) to add another slide.
+  var STORIES = {
+    parts: {
+      el: [{
+        title: "Γνήσια ανταλλακτικά, δυσεύρετα κομμάτια, αξιόπιστες μάρκες",
+        banner: "images/parts/spare-parts-banner.png",
+        bannerAlt: "Ανταλλακτικά & Αξεσουάρ",
+        paragraphs: [
+          "Από τα βασικά αναλώσιμα μέχρι τα πιο εξειδικευμένα κομμάτια, καλύπτουμε τις ανάγκες κάθε οχήματος του ομίλου Volkswagen: Volkswagen, Audi, SEAT και Škoda. Δουλεύουμε με αναγνωρισμένες μάρκες του χώρου, όπως φίλτρα MANN-FILTER, λιπαντικά Castrol, ανταλλακτικά Febi Bilstein, αναρτήσεις Bilstein, ηλεκτρικά Bosch και μπουζί NGK.",
+          "Αναζητούμε ακόμη και πιο δυσεύρετα ή εξειδικευμένα ανταλλακτικά, ανάλογα με τις ανάγκες του κάθε αυτοκινήτου. Αν δεν το έχουμε σε stock, το βρίσκουμε."
+        ],
+        galleryCount: 0
+      }],
+      en: [{
+        title: "Genuine spare parts, hard-to-find pieces, trusted brands",
+        banner: "images/parts/spare-parts-banner.png",
+        bannerAlt: "Spare Parts & Accessories",
+        paragraphs: [
+          "From everyday consumables to more specialised components, we cover the needs of every Volkswagen Group vehicle: Volkswagen, Audi, SEAT and Škoda. We work with recognised brands such as MANN-FILTER filters, Castrol lubricants, Febi Bilstein parts, Bilstein suspension components, Bosch electricals and NGK spark plugs.",
+          "We also source harder-to-find or specialised parts, depending on each car's needs. If we don't have it in stock, we'll find it."
+        ],
+        galleryCount: 0
+      }]
+    },
+    tuning: {
+      el: [{
+        title: "Τι προσφέρει η REVO",
+        banner: "images/tuning/revo-tuning-banner.png",
+        bannerAlt: "Tuning REVO Performance",
+        paragraphs: [
+          "Η REVO είναι ένα από τα πιο αναγνωρισμένα προγράμματα αναβάθμισης απόδοσης για μοντέλα του Volkswagen Group: Volkswagen, Audi, SEAT και Škoda. Ως εξουσιοδοτημένος αντιπρόσωπος, τοποθετούμε πιστοποιημένα προγράμματα λογισμικού και εξαρτήματα REVO, με πλήρη εγγύηση και τεχνική υποστήριξη.",
+          "Κάθε αναβάθμιση προσαρμόζεται στο συγκεκριμένο αυτοκίνητο: ελέγχουμε τον κινητήρα, συζητάμε τι θέλεις να πετύχεις (απόδοση, κατανάλωση, οδική αίσθηση) και προτείνουμε το κατάλληλο πρόγραμμα.",
+          "Πέρα από το λογισμικό, τοποθετούμε και υλικά εξαρτήματα REVO, όπως συστήματα εισαγωγής αέρα, για ακόμα καλύτερη απόδοση και ήχο."
+        ]
+      }],
+      en: [{
+        title: "What REVO offers",
+        banner: "images/tuning/revo-tuning-banner.png",
+        bannerAlt: "Tuning REVO Performance",
+        paragraphs: [
+          "REVO is one of the best-known performance upgrade programmes for Volkswagen Group models: Volkswagen, Audi, SEAT and Škoda. As an authorised representative, we install certified REVO software programmes and components, with full warranty and technical support.",
+          "Every upgrade is tailored to the specific car: we check the engine, discuss what you want to achieve (performance, fuel economy, driving feel) and recommend the right programme.",
+          "Beyond software, we also fit REVO hardware components, such as intake systems, for even better performance and sound."
+        ]
+      }]
+    },
+    motorsport: {
+      el: [{
+        title: "Από την Αργυρούπολη στο Σαν Μαρίνο: το Rallylegend 2026",
+        banner: "images/motorsport/rallylegend-2026-banner.png",
+        bannerAlt: "Rallylegend 2026, Σαν Μαρίνο",
+        paragraphs: [
+          "Υπάρχουν ταξίδια που τα κάνεις για δουλειά, και υπάρχουν ταξίδια που τα κάνεις επειδή κάτι μέσα σου δεν αντέχει να μείνει πίσω. Το Rallylegend ήταν το δεύτερο.",
+          "Φτάσαμε στο Σαν Μαρίνο στις αρχές Οκτωβρίου, με τους δρόμους να έχουν ήδη αρχίσει να γεμίζουν αυτοκίνητα, φωνές και τη γνωστή μυρωδιά καμένου ελαστικού που κάθε λάτρης του ράλι αναγνωρίζει από χιλιόμετρα μακριά. Τέσσερις μέρες, από τις 8 έως τις 11 Οκτωβρίου, η μικρή αυτή χώρα μετατράπηκε σε ιερό τόπο για όσους μεγαλώσαμε κοιτώντας βίντεο από WRC αγώνες.",
+          "Το σημείο που μας έμεινε περισσότερο ήταν τα service parks: οι μηχανικοί δουλεύουν κάτω από πίεση χρόνου που δεν περιγράφεται, τα αυτοκίνητα μπαίνουν λασπωμένα και βγαίνουν έτοιμα για την επόμενη μάχη μέσα σε λεπτά. Είδαμε από κοντά τις Lancia Ypsilon Rally2, με τον Nikolay Gryazin και τη Rachele Somaschini. Η Somaschini έκανε μάλιστα το ντεμπούτο της με τη Lancia Rally2 σε αυτό ακριβώς το ράλι.",
+          "Γυρίσαμε στην Αργυρούπολη με λάσπη στα παπούτσια, φωτογραφίες γεμάτες στο κινητό, και μια βεβαιότητα: ότι η αγάπη για τα αυτοκίνητα δεν είναι απλώς η δουλειά μας. Είναι ο λόγος που κάνουμε αυτή τη δουλειά."
+        ],
+        note: "[Πρόχειρο κείμενο: ο Ευστάθιος μπορεί να προσθέσει δικές του λεπτομέρειες και εντυπώσεις πριν τη δημοσίευση.]",
+        galleryCount: 4
+      }],
+      en: [{
+        title: "From Argyroupoli to San Marino: Rallylegend 2026",
+        banner: "images/motorsport/rallylegend-2026-banner.png",
+        bannerAlt: "Rallylegend 2026, San Marino",
+        paragraphs: [
+          "Some trips you take for business, and some you take because something inside you can't bear to miss it. Rallylegend was the second kind.",
+          "We arrived in San Marino in early October, with the streets already filling with cars, voices, and that unmistakable smell of hot rubber every rally fan recognises from miles away. For four days, October 8th to 11th, this small republic turned into something close to sacred ground for anyone who grew up watching WRC footage.",
+          "What stayed with us most was the service parks: mechanics working against a kind of time pressure words don't quite capture, cars rolling in covered in mud and rolling out minutes later ready for the next stage. We watched the Lancia Ypsilon Rally2 cars up close, with Nikolay Gryazin and Rachele Somaschini behind the wheel. Somaschini was making her debut in the Lancia Rally2 at this very event.",
+          "We came home to Argyroupoli with mud on our shoes, a phone full of photos, and one certainty: our love for cars isn't just our job. It's the reason we do this job at all."
+        ],
+        note: "[Draft text: Evstathios can add his own details and impressions before this is published.]",
+        galleryCount: 4
+      }]
+    },
+    imports: {
+      el: [{
+        lead: "Αναζητούμε και φέρνουμε το αυτοκίνητο που πραγματικά θέλεις, σύμφωνα με τις ανάγκες και τον προϋπολογισμό σου. Με πρόσβαση στην αγορά της Γερμανίας και της υπόλοιπης Ευρώπης, αναλαμβάνουμε όλα τα στάδια της εισαγωγής, από την πρώτη αναζήτηση μέχρι την παράδοση και την ταξινόμηση στην Ελλάδα.",
+        paragraphs: [],
+        stepsTitle: "Πώς λειτουργεί η διαδικασία;",
+        steps: [
+          { num: "01", title: "Συζητάμε τις ανάγκες σου", text: "Μας λες ποιο αυτοκίνητο αναζητάς, το μοντέλο, τον κινητήρα, τον εξοπλισμό και τον διαθέσιμο προϋπολογισμό σου. Μαζί καθορίζουμε τις προδιαγραφές της αναζήτησης." },
+          { num: "02", title: "Αναζητούμε το κατάλληλο αυτοκίνητο", text: "Εξετάζουμε διαθέσιμες επιλογές από τη Γερμανία και άλλες ευρωπαϊκές αγορές, αξιολογώντας την τιμή, τον εξοπλισμό, τα χιλιόμετρα και το ιστορικό συντήρησης." },
+          { num: "03", title: "Έλεγχος πριν την αγορά", text: "Ελέγχουμε τα διαθέσιμα έγγραφα, το ιστορικό του οχήματος και τα στοιχεία του πωλητή. Όπου είναι εφικτό, πραγματοποιείται επιτόπιος τεχνικός έλεγχος πριν από την αγορά." },
+          { num: "04", title: "Αγορά &amp; Μεταφορά", text: "Αναλαμβάνουμε τον συντονισμό της αγοράς και της μεταφοράς του αυτοκινήτου στην Ελλάδα, με ενημέρωση σε κάθε στάδιο." },
+          { num: "05", title: "Τελωνείο &amp; Ταξινόμηση", text: "Οργανώνουμε τις απαραίτητες διαδικασίες εισαγωγής, το τελωνείο, την έκδοση των απαιτούμενων εγγράφων και την ταξινόμηση, σε συνεργασία με τους αρμόδιους επαγγελματίες." },
+          { num: "06", title: "Παράδοση του αυτοκινήτου σου", text: "Η διαδικασία ολοκληρώνεται με την παράδοση του αυτοκινήτου σου, σύμφωνα με όσα έχουμε συμφωνήσει." }
+        ],
+        whyTitle: "Γιατί να επιλέξεις το Auto Shop;",
+        whyPoints: [
+          { title: "Προσωπική αναζήτηση:", text: "Δεν περιοριζόμαστε σε έτοιμες αγγελίες. Ψάχνουμε με βάση αυτό που πραγματικά θέλεις." },
+          { title: "Γνώση της ευρωπαϊκής αγοράς:", text: "Αξιοποιούμε την εμπειρία μας στον χώρο του αυτοκινήτου και την πρόσβαση σε ευρωπαϊκές πηγές." },
+          { title: "Διαφάνεια:", text: "Ενημερώνεσαι για το όχημα, το κόστος αγοράς και τα έξοδα εισαγωγής πριν προχωρήσουμε." },
+          { title: "Ολοκληρωμένη εξυπηρέτηση:", text: "Ένα σημείο επικοινωνίας για ολόκληρη τη διαδικασία, από την αναζήτηση μέχρι την παράδοση." }
+        ],
+        closing: {
+          title: "Έχεις βρει το αυτοκίνητο που θέλεις;",
+          text: "Είτε αναζητάς ένα συγκεκριμένο μοντέλο είτε χρειάζεσαι βοήθεια για να επιλέξεις το κατάλληλο, είμαστε εδώ για να σε βοηθήσουμε.",
+          line: "Εσύ επιλέγεις το αυτοκίνητο. Εμείς αναλαμβάνουμε τη διαδρομή.",
+          ctaText: "Ζήτησε προσφορά εισαγωγής",
+          ctaHref: "#contact"
+        },
+        photos: [
+          { src: "images/imports/trip-germany-01.jpg", alt: "Παραλαβή αυτοκινήτων στη Γερμανία" },
+          { src: "images/imports/trip-02-refuel.jpg", alt: "Ανεφοδιασμός στη Γερμανία" },
+          { src: "images/imports/trip-03-audi-night.jpg", alt: "Αυτοκίνητο στη Γερμανία" },
+          { src: "images/imports/trip-05-transporter.jpg", alt: "VW Transporter σε έκθεση στη Γερμανία" },
+          { src: "images/imports/trip-06-q3.jpg", alt: "Audi Q3 σε έκθεση στη Γερμανία" },
+          { src: "images/imports/trip-07-pickup.jpg", alt: "Παραλαβή αυτοκινήτων" }
+        ],
+        galleryCount: 6
+      }],
+      en: [{
+        lead: "We search for and bring the car you really want, based on your needs and budget. With access to the German market and the rest of Europe, we handle every stage of the import, from the first search to delivery and registration in Greece.",
+        paragraphs: [],
+        stepsTitle: "How the process works",
+        steps: [
+          { num: "01", title: "We discuss your needs", text: "Tell us which car you're looking for: the model, engine, equipment and your available budget. Together we define the search specifications." },
+          { num: "02", title: "We search for the right car", text: "We review available options from Germany and other European markets, evaluating price, equipment, mileage and service history." },
+          { num: "03", title: "Checks before purchase", text: "We check the available documents, the vehicle's history and the seller's details. Where possible, an on-site technical inspection is carried out before purchase." },
+          { num: "04", title: "Purchase &amp; Transport", text: "We coordinate the purchase and transport of the car to Greece, keeping you informed at every stage." },
+          { num: "05", title: "Customs &amp; Registration", text: "We organise the necessary import procedures, customs, issuing the required documents and registration, working with the relevant professionals." },
+          { num: "06", title: "Delivery of your car", text: "The process is completed with the delivery of your car, as agreed." }
+        ],
+        whyTitle: "Why choose Auto Shop?",
+        whyPoints: [
+          { title: "Personal search:", text: "We don't limit ourselves to existing listings. We search based on what you actually want." },
+          { title: "Knowledge of the European market:", text: "We draw on our experience in the automotive world and our access to European sources." },
+          { title: "Transparency:", text: "You're informed about the vehicle, the purchase cost and the import costs before we proceed." },
+          { title: "Complete service:", text: "One point of contact for the whole process, from search to delivery." }
+        ],
+        closing: {
+          title: "Found the car you want?",
+          text: "Whether you're looking for a specific model or need help choosing the right one, we're here to help.",
+          line: "You choose the car. We handle the journey.",
+          ctaText: "Request an import quote",
+          ctaHref: "#contact"
+        },
+        photos: [
+          { src: "images/imports/trip-germany-01.jpg", alt: "Picking up cars in Germany" },
+          { src: "images/imports/trip-02-refuel.jpg", alt: "Refuelling in Germany" },
+          { src: "images/imports/trip-03-audi-night.jpg", alt: "A car in Germany" },
+          { src: "images/imports/trip-05-transporter.jpg", alt: "VW Transporter at a dealership in Germany" },
+          { src: "images/imports/trip-06-q3.jpg", alt: "Audi Q3 at a dealership in Germany" },
+          { src: "images/imports/trip-07-pickup.jpg", alt: "Picking up vehicles" }
+        ],
+        galleryCount: 6
+      }]
+    }
+  };
+
+  function getLang() {
+    var q = new URLSearchParams(location.search).get("lang");
+    if (q === "en" || q === "el") return q;
+    try { var s = localStorage.getItem("autoshop-lang"); if (s === "en" || s === "el") return s; } catch (e) {}
+    return "el";
+  }
+
+  // --- scroll-reveal: shared observer, elements fade in as they enter view ---
+  var io = ("IntersectionObserver" in window)
+    ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" })
+    : null;
+  function observeReveal(root) {
+    var els = root.querySelectorAll(".reveal");
+    if (io) { els.forEach(function (el) { io.observe(el); }); }
+    else { els.forEach(function (el) { el.classList.add("is-visible"); }); }
+  }
+
+  // --- story carousels (Motorsport, Imports) ---
+  function buildStorySlideHTML(story, dict) {
+    var html = '<article class="story-slide">';
+    if (story.banner) {
+      html += '<img class="motor-banner reveal" src="' + story.banner + '" alt="' + story.bannerAlt + '">';
+    }
+    html += '<div class="motor-article reveal">';
+    if (story.title) html += '<h3>' + story.title + '</h3>';
+    if (story.lead) html += '<p>' + story.lead + '</p>';
+    story.paragraphs.forEach(function (p) { html += '<p>' + p + '</p>'; });
+    if (story.stepsTitle) html += '<h4>' + story.stepsTitle + '</h4>';
+    if (story.steps) {
+      html += '<div class="story-steps">';
+      story.steps.forEach(function (s) {
+        html += '<div class="story-step"><span class="step-num">' + s.num + '</span><h5>' + s.title + '</h5><p>' + s.text + '</p></div>';
+      });
+      html += '</div>';
+    }
+    if (story.whyTitle) html += '<h4>' + story.whyTitle + '</h4>';
+    if (story.whyPoints) {
+      html += '<ul class="story-why">';
+      story.whyPoints.forEach(function (w) { html += '<li><b>' + w.title + '</b> ' + w.text + '</li>'; });
+      html += '</ul>';
+    }
+    if (story.closing) {
+      html += '<div class="story-closing">';
+      if (story.closing.title) html += '<h4>' + story.closing.title + '</h4>';
+      if (story.closing.text) html += '<p>' + story.closing.text + '</p>';
+      if (story.closing.line) html += '<p class="closing-line">' + story.closing.line + '</p>';
+      if (story.closing.ctaText) html += '<a class="story-cta" href="' + (story.closing.ctaHref || '#contact') + '">' + story.closing.ctaText + '</a>';
+      html += '</div>';
+    }
+    if (story.note) html += '<p class="motor-note">' + story.note + '</p>';
+    html += '</div>';
+    var photos = story.photos || [];
+    var galleryCount = story.galleryCount || 0;
+    if (photos.length || galleryCount) {
+      html += '<p class="gallery-title">' + dict.galleryTitle + '</p><div class="gallery-grid reveal">';
+      photos.forEach(function (p) {
+        html += '<div class="gallery-slot has-photo"><img src="' + p.src + '" alt="' + p.alt + '" loading="lazy"></div>';
+      });
+      for (var i = photos.length; i < galleryCount; i++) html += '<div class="gallery-slot">' + dict.gallerySlot + '</div>';
+      html += '</div>';
+    }
+    html += '</article>';
+    return html;
+  }
+
+  function refreshCarouselControls(wrapperEl) {
+    var track = wrapperEl.querySelector(".story-track");
+    var count = track.children.length;
+    var multi = count > 1;
+    var prevBtn = wrapperEl.querySelector(".story-nav.prev");
+    var nextBtn = wrapperEl.querySelector(".story-nav.next");
+    var dotsWrap = wrapperEl.querySelector(".story-dots");
+    // with only one slide there's nothing to swipe to; disable horizontal
+    // scroll entirely so trackpads/mice can't cause a stray sideways wiggle
+    track.style.overflowX = multi ? "" : "hidden";
+    if (prevBtn) prevBtn.style.display = multi ? "" : "none";
+    if (nextBtn) nextBtn.style.display = multi ? "" : "none";
+    if (!dotsWrap) return;
+    dotsWrap.style.display = multi ? "" : "none";
+    dotsWrap.innerHTML = "";
+    if (!multi) return;
+    for (var i = 0; i < count; i++) {
+      (function (idx) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "story-dot" + (idx === 0 ? " active" : "");
+        b.setAttribute("aria-label", "Slide " + (idx + 1));
+        b.addEventListener("click", function () {
+          track.scrollTo({ left: track.children[idx].offsetLeft, behavior: "smooth" });
+        });
+        dotsWrap.appendChild(b);
+      })(i);
+    }
+  }
+
+  function renderCarousel(wrapperEl, stories, dict) {
+    var track = wrapperEl.querySelector(".story-track");
+    track.innerHTML = stories.map(function (s) { return buildStorySlideHTML(s, dict); }).join("");
+    track.scrollLeft = 0;
+    refreshCarouselControls(wrapperEl);
+    observeReveal(wrapperEl);
+  }
+
+  // click/scroll listeners registered once per carousel; content is rebuilt on language switch
+  function setupCarouselOnce(wrapperEl) {
+    var track = wrapperEl.querySelector(".story-track");
+    var prevBtn = wrapperEl.querySelector(".story-nav.prev");
+    var nextBtn = wrapperEl.querySelector(".story-nav.next");
+    var dotsWrap = wrapperEl.querySelector(".story-dots");
+    if (prevBtn) prevBtn.addEventListener("click", function () {
+      track.scrollBy({ left: -track.clientWidth, behavior: "smooth" });
+    });
+    if (nextBtn) nextBtn.addEventListener("click", function () {
+      track.scrollBy({ left: track.clientWidth, behavior: "smooth" });
+    });
+    track.addEventListener("scroll", function () {
+      window.requestAnimationFrame(function () {
+        if (!dotsWrap) return;
+        var idx = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+        Array.prototype.forEach.call(dotsWrap.children, function (d, i) {
+          d.classList.toggle("active", i === idx);
+        });
+      });
+    }, { passive: true });
+  }
+
+  var partsCarousel = document.getElementById("partsCarousel");
+  var tuningCarousel = document.getElementById("tuningCarousel");
+  var motorsportCarousel = document.getElementById("motorsportCarousel");
+  var importsCarousel = document.getElementById("importsCarousel");
+  setupCarouselOnce(partsCarousel);
+  setupCarouselOnce(tuningCarousel);
+  setupCarouselOnce(motorsportCarousel);
+  setupCarouselOnce(importsCarousel);
+
+  // --- language switching ---
+  function setLang(lang) {
+    var dict = T[lang];
+    document.documentElement.lang = lang;
+    document.title = dict.pageTitle;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-html");
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.getElementById("langToggle").textContent = dict.langButton;
+    try { localStorage.setItem("autoshop-lang", lang); } catch (e) {}
+
+    renderCarousel(partsCarousel, STORIES.parts[lang], dict);
+    renderCarousel(tuningCarousel, STORIES.tuning[lang], dict);
+    renderCarousel(motorsportCarousel, STORIES.motorsport[lang], dict);
+    renderCarousel(importsCarousel, STORIES.imports[lang], dict);
+    observeReveal(document);
+  }
+
+  document.getElementById("langToggle").addEventListener("click", function () {
+    setLang(document.documentElement.lang === "en" ? "el" : "en");
+  });
+
+  setLang(getLang());
+
+  // header shadow once the page has scrolled
+  var header = document.querySelector("header.site");
+  function onScroll() {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+</script>
+
 </body>
 </html>

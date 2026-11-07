@@ -288,8 +288,9 @@
     tuning: {
       el: [{
         title: "Τι προσφέρει η REVO",
-        banner: "images/tuning/revo-tuning-banner.png",
-        bannerAlt: "Tuning REVO Performance",
+        banner: "images/tuning/vcds-diagnostics.jpg",
+        bannerAlt: "Διάγνωση και προγραμματισμός με VCDS σε Audi",
+        photoStyle: true,
         paragraphs: [
           "Η REVO είναι ένα από τα πιο αναγνωρισμένα προγράμματα αναβάθμισης απόδοσης για μοντέλα του Volkswagen Group: Volkswagen, Audi, SEAT και Škoda. Ως εξουσιοδοτημένος αντιπρόσωπος, τοποθετούμε πιστοποιημένα προγράμματα λογισμικού και εξαρτήματα REVO, με πλήρη εγγύηση και τεχνική υποστήριξη.",
           "Κάθε αναβάθμιση προσαρμόζεται στο συγκεκριμένο αυτοκίνητο: ελέγχουμε τον κινητήρα, συζητάμε τι θέλεις να πετύχεις (απόδοση, κατανάλωση, οδική αίσθηση) και προτείνουμε το κατάλληλο πρόγραμμα.",
@@ -298,8 +299,9 @@
       }],
       en: [{
         title: "What REVO offers",
-        banner: "images/tuning/revo-tuning-banner.png",
-        bannerAlt: "Tuning REVO Performance",
+        banner: "images/tuning/vcds-diagnostics.jpg",
+        bannerAlt: "VCDS diagnostics and programming on an Audi",
+        photoStyle: true,
         paragraphs: [
           "REVO is one of the best-known performance upgrade programmes for Volkswagen Group models: Volkswagen, Audi, SEAT and Škoda. As an authorised representative, we install certified REVO software programmes and components, with full warranty and technical support.",
           "Every upgrade is tailored to the specific car: we check the engine, discuss what you want to achieve (performance, fuel economy, driving feel) and recommend the right programme.",
@@ -439,7 +441,8 @@
   function buildStorySlideHTML(story, dict) {
     var html = '<article class="story-slide">';
     if (story.banner) {
-      html += '<img class="motor-banner reveal" src="' + story.banner + '" alt="' + story.bannerAlt + '">';
+      var bannerClass = "motor-banner reveal" + (story.photoStyle ? " photo" : "");
+      html += '<img class="' + bannerClass + '" src="' + story.banner + '" alt="' + story.bannerAlt + '">';
     }
     html += '<div class="motor-article reveal">';
     if (story.title) html += '<h3>' + story.title + '</h3>';

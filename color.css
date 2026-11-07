@@ -1,0 +1,31 @@
+/* White theme: overrides the dark blocks in style.css */
+:root{--ink:#111;--line:#e3e3df;--muted:#666;--accent:#111}
+.topline{background:#fff;color:#111;border-bottom:1px solid var(--line)}
+header{border-bottom:1px solid var(--line)}
+.call{background:#fff;color:#111;border:2px solid #111}
+.hero{color:#111;border-bottom:1px solid var(--line)}
+.veil{background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.75) 45%,rgba(255,255,255,.1) 80%)}
+.hero>img{filter:grayscale(1) contrast(1.05) brightness(1.05)}
+.hero-copy>p:not(.tag){color:#333}
+.hero h1 i{color:#777}
+.hero-line{border-top-color:#ccc}
+.primary{background:#111;color:#fff}
+.under{color:#111}
+.facts{background:#fff;color:#111;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts article{border-right:1px solid var(--line)}
+.facts span{color:#666}
+.mobile-card{background:#fff;color:#111;border:2px solid #111}
+.mobile-card:before{border-color:#ddd}
+.mobile-card:after{border-color:#eee}
+.mobile-arrow{border-color:#111;color:#111}
+.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about:after{border-color:#eee}
+.about h2 i{color:#777}
+.mark{color:#111}
+.contact{background:#fff;color:#111;border-top:1px solid var(--line)}
+.contact .tag{color:#666}
+.contact h2 i{color:#777}
+.details a:not(.phone){color:#333}
+.details .phone{color:#111}
+footer{background:#fff;color:#111}
+.steps{background:#fff}

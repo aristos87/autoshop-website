@@ -283,6 +283,20 @@ h2 .red { color: var(--red); }
 .photo-header h2, .photo-header .section-intro { margin-bottom: 0; }
 .photo-header h2 { margin-bottom: 10px; }
 
+/* Contained variant: for photos too small/low-res to stretch edge-to-edge without
+   blurring (e.g. Tuning's portrait phone photo). Stays inside .wrap's max-width
+   instead of full-bleed, so it needs far less upscaling and stays sharper. */
+.photo-header--contained {
+  min-height: clamp(280px, 55vw, 700px);
+  background-position: center center;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.photo-header-text { position: relative; z-index: 1; padding: 0 24px 22px; }
+.photo-header-text h2, .photo-header-text .section-intro { margin-bottom: 0; }
+.photo-header-text h2 { margin-bottom: 10px; }
+
 /* Spare Parts: a green glow accent (genuine/certified feel) */
 #parts::after {
   content: "";

@@ -178,21 +178,21 @@ h2::before {
 .btn-line:hover { background: var(--white); color: var(--black); }
 
 /* Sections */
-section { padding: 64px 0; }
+section { padding: 48px 0; }
 section.alt { background: var(--grey); }
 h2 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 900; font-style: italic; margin: 0 0 12px; line-height: 1.1; }
 h2 .red { color: var(--red); }
-.section-intro { color: var(--muted); max-width: 640px; margin: 0 0 36px; }
+.section-intro { color: var(--muted); max-width: 640px; margin: 0 0 24px; }
 
-.section-split { margin-top: 56px; padding-top: 48px; }
+.section-split { margin-top: 32px; padding-top: 28px; }
 
 /* Services grid: each card is a link into its own section (or Contact), never a dead end */
-.grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+.grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 .card {
   display: block;
   background: var(--white);
   border-top: 5px solid var(--red);
-  padding: 24px;
+  padding: 20px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
   text-decoration: none;
   position: relative;

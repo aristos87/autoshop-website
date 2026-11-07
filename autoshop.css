@@ -471,8 +471,9 @@ footer .todo { color: #ffb3b5; }
 }
 
 /* Scroll-reveal: elements fade/slide in as they enter the viewport */
-.reveal { opacity: 0; transition: opacity 0.3s ease; }
-.reveal.is-visible { opacity: 1; }
+/* scroll-reveal removed: it was causing cards to render half-faded mid-scroll on mobile,
+   which looked like broken/blank boxes. Content is just shown immediately now. */
+.reveal { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }

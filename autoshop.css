@@ -254,7 +254,7 @@ h2 .red { color: var(--red); }
   position: absolute;
   width: 560px; height: 560px;
   bottom: -160px; left: -160px;
-  background: radial-gradient(circle, rgba(215,150,20,0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(215,20,26,0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -289,7 +289,7 @@ h2 .red { color: var(--red); }
   position: absolute;
   width: 560px; height: 560px;
   bottom: -160px; right: -160px;
-  background: radial-gradient(circle, rgba(70,190,120,0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(215,20,26,0.22), transparent 70%);
   pointer-events: none;
 }
 .brand-row-label { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: #9a9a9a; margin: 0; }
@@ -302,7 +302,7 @@ h2 .red { color: var(--red); }
   position: absolute;
   width: 560px; height: 560px;
   top: -160px; left: -160px;
-  background: radial-gradient(circle, rgba(70,140,215,0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(215,20,26,0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -495,7 +495,8 @@ footer .todo { color: #ffb3b5; }
   nav.main a::after { display: none; }
   header.site .wrap { flex-wrap: wrap; }
   .topbar { display: none; }
-  .hero { padding: 40px 0 64px; }
+  .section-split { margin-top: 28px; padding-top: 24px; }
+  .hero { padding: 40px 0 64px; background-position: 30% 62%; }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }

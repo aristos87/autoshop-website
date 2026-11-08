@@ -512,12 +512,16 @@ footer .todo { color: #ffb3b5; }
   .topbar { display: none; }
   .section-split { margin-top: 28px; padding-top: 24px; }
   .hero {
-    padding: 40px 0 170px;
-    /* Force width-based scaling even though the mobile hero is tall and narrow;
-       plain "cover" would otherwise switch to height-based scaling here, which
-       makes background-position-Y do nothing (that's why the last attempt had no effect) */
-    background-size: 230% auto;
-    background-position: 30% 0%;
+    padding: 40px 0 64px;
+    /* "cover" kept guessing wrong crops on mobile across several attempts.
+       Switching the photo layer (only) to "contain" guarantees the whole
+       photo, including the Audi rings, is always fully visible, never cropped.
+       The two gradient layers keep filling the box as before (100% 100%).
+       Letterbox bars are invisible here since the photo's own backdrop is
+       black, same as the hero background. */
+    background-size: 100% 100%, 100% 100%, contain;
+    background-position: center, center, center bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   section { padding: 44px 0; }

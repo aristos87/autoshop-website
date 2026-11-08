@@ -33,8 +33,8 @@
   </a>
   <nav class="main" id="mainNav">
     <a href="#services" data-i18n="navServices">Υπηρεσίες</a>
-    <a href="#parts" data-i18n="navParts">Ανταλλακτικά</a>
     <a href="#sales" data-i18n="navSales">Πωλήσεις</a>
+    <a href="#parts" data-i18n="navParts">Ανταλλακτικά</a>
     <a href="#tuning" data-i18n="navTuning">Tuning</a>
     <a href="#imports" data-i18n="navImports">Εισαγωγές</a>
     <a href="#motorsport" data-i18n="navMotorsport">Motorsport</a>
@@ -65,25 +65,28 @@
       <h2 data-i18n-html="servicesTitle">Οι <span class="red">υπηρεσίες</span> μας</h2>
       <p class="section-intro" data-i18n="servicesIntro">Όλα όσα χρειάζεται ένα αυτοκίνητο, από ένα ανταλλακτικό μέχρι το επόμενο όχημά σου.</p>
       <div class="grid four">
-        <a class="card reveal" href="#parts"><h3 data-i18n="s1Title">Ανταλλακτικά</h3><p data-i18n="s1Text">Ανταλλακτικά για VW, Audi, SEAT και Škoda.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         <a class="card reveal" href="#sales"><h3 data-i18n="s2Title">Πωλήσεις</h3><p data-i18n="s2Text">Αυτοκίνητα προς πώληση. Επικοινώνησε μαζί μας για διαθέσιμα οχήματα.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+        <a class="card reveal" href="#parts"><h3 data-i18n="s1Title">Ανταλλακτικά</h3><p data-i18n="s1Text">Ανταλλακτικά για VW, Audi, SEAT και Škoda.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         <a class="card reveal" href="#tuning"><h3 data-i18n="s3Title">Tuning</h3><p data-i18n="s3Text">Επεμβάσεις απόδοσης σε συνεργασία με την REVO.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         <a class="card reveal" href="#imports"><h3 data-i18n="s4Title">Εισαγωγές</h3><p data-i18n="s4Text">Φέρνουμε το αυτοκίνητο που θέλεις από το εξωτερικό.</p><span class="card-arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div class="wrap section-split">
-      <h2 data-i18n-html="brandsTitle">Εξειδίκευση σε <span class="red">Volkswagen Group</span></h2>
-      <p class="section-intro" data-i18n="brandsIntro">Εξειδικευμένη εξυπηρέτηση για τα brands του ομίλου.</p>
-      <div class="brands">
-        <figure class="brand-logo reveal"><img src="images/brands/revo.png" alt="REVO – Εξουσιοδοτημένος Αντιπρόσωπος"></figure>
-        <figure class="brand-logo reveal"><img src="images/brands/volkswagen.png" alt="Volkswagen Motorsport"></figure>
-        <figure class="brand-logo reveal"><img src="images/brands/audi-sport.png" alt="Audi Sport"></figure>
-        <figure class="brand-logo reveal"><img src="images/brands/seat.png" alt="SEAT"></figure>
-        <figure class="brand-logo reveal"><img src="images/brands/skoda.png" alt="Škoda"></figure>
+  </section>
+
+  <section id="sales" class="motor">
+    <div class="wrap">
+      <h2 data-i18n-html="salesTitle">Αυτοκίνητα <span class="red">προς Πώληση</span></h2>
+      <p class="section-intro" data-i18n="salesIntro">Δες τα διαθέσιμα αυτοκίνητά μας στην επίσημη σελίδα μας στο car.gr.</p>
+      <div class="story-carousel" id="salesCarousel">
+        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
+        <div class="story-track"></div>
+        <button class="story-nav next" type="button" aria-label="Next">›</button>
+        <div class="story-dots"></div>
       </div>
-      <p class="partner-note" data-i18n="revoNote">Η REVO είναι το εξουσιοδοτημένο tuning πρόγραμμα του κατασκευαστή.</p>
     </div>
   </section>
+
+  <div class="seam-line" aria-hidden="true"></div>
 
   <section id="parts" class="motor">
     <div class="wrap">
@@ -98,21 +101,6 @@
         <img class="brand-badge" src="images/parts/ngk.png" alt="NGK">
       </div>
       <div class="story-carousel" id="partsCarousel">
-        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
-        <div class="story-track"></div>
-        <button class="story-nav next" type="button" aria-label="Next">›</button>
-        <div class="story-dots"></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="seam-line" aria-hidden="true"></div>
-
-  <section id="sales" class="motor">
-    <div class="wrap">
-      <h2 data-i18n-html="salesTitle">Αυτοκίνητα <span class="red">προς Πώληση</span></h2>
-      <p class="section-intro" data-i18n="salesIntro">Δες τα διαθέσιμα αυτοκίνητά μας στην επίσημη σελίδα μας στο car.gr.</p>
-      <div class="story-carousel" id="salesCarousel">
         <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
         <div class="story-track"></div>
         <button class="story-nav next" type="button" aria-label="Next">›</button>
@@ -185,6 +173,18 @@
       <p class="section-intro" data-i18n="aboutP1">Με περισσότερα από 30 χρόνια εμπειρίας στον χώρο του αυτοκινήτου, η αγάπη μας για την αυτοκίνηση, την τεχνολογία και τις υψηλές επιδόσεις αποτελεί τη βάση της φιλοσοφίας μας.</p>
       <p class="section-intro" data-i18n="aboutP2">Η δραστηριότητά μας ξεκίνησε από τον χώρο των ανταλλακτικών και του tuning, με ιδιαίτερη εξειδίκευση στα οχήματα του ομίλου Volkswagen: Audi, VW, SEAT και ŠKODA. Με την πάροδο των χρόνων, εξελιχθήκαμε σε μια ολοκληρωμένη επιχείρηση που συνδυάζει την προμήθεια ανταλλακτικών, τις βελτιώσεις, την εισαγωγή αυτοκινήτων και τις υπηρεσίες συντήρησης και φροντίδας.</p>
       <p class="closing-line" data-i18n="aboutClosing">AUTO SHOP. Driven by Experience. Defined by Performance.</p>
+    </div>
+    <div class="wrap section-split">
+      <h2 data-i18n-html="brandsTitle">Εξειδίκευση σε <span class="red">Volkswagen Group</span></h2>
+      <p class="section-intro" data-i18n="brandsIntro">Εξειδικευμένη εξυπηρέτηση για τα brands του ομίλου.</p>
+      <div class="brands">
+        <figure class="brand-logo reveal"><img src="images/brands/revo.png" alt="REVO – Εξουσιοδοτημένος Αντιπρόσωπος"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/volkswagen.png" alt="Volkswagen Motorsport"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/audi-sport.png" alt="Audi Sport"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/seat.png" alt="SEAT"></figure>
+        <figure class="brand-logo reveal"><img src="images/brands/skoda.png" alt="Škoda"></figure>
+      </div>
+      <p class="partner-note" data-i18n="revoNote">Η REVO είναι το εξουσιοδοτημένο tuning πρόγραμμα του κατασκευαστή.</p>
     </div>
   </section>
 

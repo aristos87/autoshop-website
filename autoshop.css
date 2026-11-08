@@ -48,6 +48,7 @@ header.site .wrap { display: flex; align-items: center; justify-content: space-b
 .wordmark { font-weight: 900; font-style: italic; font-size: 26px; text-decoration: none; letter-spacing: -0.5px; }
 .wordmark span { color: var(--red); }
 .brand-block { display: flex; flex-direction: column; line-height: 1; text-decoration: none; gap: 3px; }
+.header-logo { height: 32px; width: auto; display: block; }
 .owner-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--muted); }
 
 nav.main { display: flex; gap: 22px; flex-wrap: wrap; font-weight: 600; font-size: 15px; }
@@ -280,6 +281,9 @@ h2 .red { color: var(--red); }
 /* Imports photo was re-cropped to remove excess sky, so it needs a shorter band
    than the default (the Motorsport photo keeps the default, it wasn't affected) */
 #imports .photo-header { min-height: clamp(300px, 34vw, 700px); }
+/* Tuning's photo has its subject (the branded laptop screen) lower in frame,
+   so it needs a center anchor instead of the default top anchor, or it gets cropped out */
+#tuning .photo-header { background-position: center center; }
 .photo-header h2, .photo-header .section-intro { margin-bottom: 0; }
 .photo-header h2 { margin-bottom: 10px; }
 

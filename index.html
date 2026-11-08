@@ -34,6 +34,7 @@
   <nav class="main" id="mainNav">
     <a href="#services" data-i18n="navServices">Υπηρεσίες</a>
     <a href="#parts" data-i18n="navParts">Ανταλλακτικά</a>
+    <a href="#sales" data-i18n="navSales">Πωλήσεις</a>
     <a href="#tuning" data-i18n="navTuning">Tuning</a>
     <a href="#imports" data-i18n="navImports">Εισαγωγές</a>
     <a href="#motorsport" data-i18n="navMotorsport">Motorsport</a>
@@ -65,7 +66,7 @@
       <p class="section-intro" data-i18n="servicesIntro">Όλα όσα χρειάζεται ένα αυτοκίνητο, από ένα ανταλλακτικό μέχρι το επόμενο όχημά σου.</p>
       <div class="grid four">
         <a class="card reveal" href="#parts"><h3 data-i18n="s1Title">Ανταλλακτικά</h3><p data-i18n="s1Text">Ανταλλακτικά για VW, Audi, SEAT και Škoda.</p><span class="card-arrow" aria-hidden="true">→</span></a>
-        <a class="card reveal" href="#contact"><h3 data-i18n="s2Title">Πωλήσεις</h3><p data-i18n="s2Text">Αυτοκίνητα προς πώληση. Επικοινώνησε μαζί μας για διαθέσιμα οχήματα.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+        <a class="card reveal" href="#sales"><h3 data-i18n="s2Title">Πωλήσεις</h3><p data-i18n="s2Text">Αυτοκίνητα προς πώληση. Επικοινώνησε μαζί μας για διαθέσιμα οχήματα.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         <a class="card reveal" href="#tuning"><h3 data-i18n="s3Title">Tuning</h3><p data-i18n="s3Text">Επεμβάσεις απόδοσης σε συνεργασία με την REVO.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         <a class="card reveal" href="#imports"><h3 data-i18n="s4Title">Εισαγωγές</h3><p data-i18n="s4Text">Φέρνουμε το αυτοκίνητο που θέλεις από το εξωτερικό.</p><span class="card-arrow" aria-hidden="true">→</span></a>
       </div>
@@ -97,6 +98,21 @@
         <img class="brand-badge" src="images/parts/ngk.png" alt="NGK">
       </div>
       <div class="story-carousel" id="partsCarousel">
+        <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
+        <div class="story-track"></div>
+        <button class="story-nav next" type="button" aria-label="Next">›</button>
+        <div class="story-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam-line" aria-hidden="true"></div>
+
+  <section id="sales" class="motor">
+    <div class="wrap">
+      <h2 data-i18n-html="salesTitle">Αυτοκίνητα <span class="red">προς Πώληση</span></h2>
+      <p class="section-intro" data-i18n="salesIntro">Δες τα διαθέσιμα αυτοκίνητά μας στην επίσημη σελίδα μας στο car.gr.</p>
+      <div class="story-carousel" id="salesCarousel">
         <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
         <div class="story-track"></div>
         <button class="story-nav next" type="button" aria-label="Next">›</button>
@@ -202,7 +218,7 @@
   var T = {
     el: {
       topAddress: "Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452",
-      navServices: "Υπηρεσίες", navParts: "Ανταλλακτικά", navTuning: "Tuning", navImports: "Εισαγωγές", navMotorsport: "Motorsport", navAbout: "Σχετικά", navContact: "Επικοινωνία",
+      navServices: "Υπηρεσίες", navParts: "Ανταλλακτικά", navSales: "Πωλήσεις", navTuning: "Tuning", navImports: "Εισαγωγές", navMotorsport: "Motorsport", navAbout: "Σχετικά", navContact: "Επικοινωνία",
       heroEyebrow: "Ανταλλακτικά · Πωλήσεις Αυτοκινήτων",
       heroLead: "Ανταλλακτικά, tuning και εισαγωγές αυτοκινήτων, με εξειδίκευση στα μοντέλα του Volkswagen Group.",
       heroCta1: "Επικοινωνία", heroCta2: "Οι υπηρεσίες μας",
@@ -218,6 +234,8 @@
       partsTitle: 'Ανταλλακτικά <span class="red">και Αξεσουάρ</span>',
       partsIntro: "Γνήσια ανταλλακτικά και αναγνωρισμένες μάρκες για VW, Audi, SEAT και Škoda.",
       partsBrandsLabel: "Εργαζόμαστε με μάρκες όπως:",
+      salesTitle: 'Αυτοκίνητα <span class="red">προς Πώληση</span>',
+      salesIntro: "Δες τα διαθέσιμα αυτοκίνητά μας στην επίσημη σελίδα μας στο car.gr.",
       tuningTitle: 'Tuning με <span class="red">REVO</span>',
       tuningIntro: "Ως εξουσιοδοτημένος αντιπρόσωπος REVO, αναβαθμίζουμε την απόδοση του αυτοκινήτου σου με πιστοποιημένα προγράμματα.",
       importsTitle: 'Εισαγωγές Αυτοκινήτων από <span class="red">Γερμανία και Ευρώπη</span>',
@@ -239,7 +257,7 @@
     },
     en: {
       topAddress: "Kyriakou Efstathiadi 32, Argyroupoli 16452, Athens",
-      navServices: "Services", navParts: "Spare Parts", navTuning: "Tuning", navImports: "Imports", navMotorsport: "Motorsport", navAbout: "About", navContact: "Contact",
+      navServices: "Services", navParts: "Spare Parts", navSales: "Sales", navTuning: "Tuning", navImports: "Imports", navMotorsport: "Motorsport", navAbout: "About", navContact: "Contact",
       heroEyebrow: "Spare Parts · Car Sales",
       heroLead: "Spare parts, tuning and car imports, specialising in Volkswagen Group models.",
       heroCta1: "Contact us", heroCta2: "Our services",
@@ -255,6 +273,8 @@
       partsTitle: 'Spare Parts <span class="red">and Accessories</span>',
       partsIntro: "Genuine spare parts and recognised brands for VW, Audi, SEAT and Škoda.",
       partsBrandsLabel: "We work with brands such as:",
+      salesTitle: 'Cars <span class="red">for Sale</span>',
+      salesIntro: "See our available cars on our official car.gr page.",
       tuningTitle: 'Tuning with <span class="red">REVO</span>',
       tuningIntro: "As an authorised REVO representative, we upgrade your car's performance with certified programmes.",
       importsTitle: 'Car Imports from <span class="red">Germany and Europe</span>',
@@ -279,6 +299,30 @@
   // Journal stories for the swipeable carousels. Add more entries to either
   // array (keeping el/en in sync, same order) to add another slide.
   var STORIES = {
+    sales: {
+      el: [{
+        paragraphs: [
+          "Ο στόλος μας ανανεώνεται συνεχώς με προσεκτικά επιλεγμένα αυτοκίνητα."
+        ],
+        closing: {
+          title: "Δες όλο τον στόλο μας",
+          text: "Για να δεις όλα τα αυτοκίνητα που έχουμε αυτή τη στιγμή προς πώληση, με φωτογραφίες, τιμές και πλήρη στοιχεία, επισκέψου την επίσημη σελίδα μας στο car.gr.",
+          ctaText: "Δες τα αυτοκίνητά μας στο car.gr",
+          ctaHref: "https://autoshop.car.gr/cars/"
+        }
+      }],
+      en: [{
+        paragraphs: [
+          "Our stock is updated regularly with carefully selected cars."
+        ],
+        closing: {
+          title: "See our full stock",
+          text: "To see every car we currently have for sale, with photos, prices and full details, visit our official page on car.gr.",
+          ctaText: "View our cars on car.gr",
+          ctaHref: "https://autoshop.car.gr/cars/"
+        }
+      }]
+    },
     parts: {
       el: [{
         title: "Γνήσια ανταλλακτικά, δυσεύρετα κομμάτια, αξιόπιστες μάρκες",
@@ -455,7 +499,11 @@
       if (story.closing.title) html += '<h4>' + story.closing.title + '</h4>';
       if (story.closing.text) html += '<p>' + story.closing.text + '</p>';
       if (story.closing.line) html += '<p class="closing-line">' + story.closing.line + '</p>';
-      if (story.closing.ctaText) html += '<a class="story-cta" href="' + (story.closing.ctaHref || '#contact') + '">' + story.closing.ctaText + '</a>';
+      if (story.closing.ctaText) {
+        var ctaHref = story.closing.ctaHref || '#contact';
+        var ctaExtra = ctaHref.indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '';
+        html += '<a class="story-cta" href="' + ctaHref + '"' + ctaExtra + '>' + story.closing.ctaText + '</a>';
+      }
       html += '</div>';
     }
     if (story.note) html += '<p class="motor-note">' + story.note + '</p>';
@@ -535,10 +583,12 @@
     }, { passive: true });
   }
 
+  var salesCarousel = document.getElementById("salesCarousel");
   var partsCarousel = document.getElementById("partsCarousel");
   var tuningCarousel = document.getElementById("tuningCarousel");
   var motorsportCarousel = document.getElementById("motorsportCarousel");
   var importsCarousel = document.getElementById("importsCarousel");
+  setupCarouselOnce(salesCarousel);
   setupCarouselOnce(partsCarousel);
   setupCarouselOnce(tuningCarousel);
   setupCarouselOnce(motorsportCarousel);
@@ -560,6 +610,7 @@
     document.getElementById("langToggle").textContent = dict.langButton;
     try { localStorage.setItem("autoshop-lang", lang); } catch (e) {}
 
+    renderCarousel(salesCarousel, STORIES.sales[lang], dict);
     renderCarousel(partsCarousel, STORIES.parts[lang], dict);
     renderCarousel(tuningCarousel, STORIES.tuning[lang], dict);
     renderCarousel(motorsportCarousel, STORIES.motorsport[lang], dict);

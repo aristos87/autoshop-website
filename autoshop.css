@@ -540,7 +540,7 @@ footer .todo { color: #ffb3b5; }
      its own copy; the car photo stays the full translucent background as
      before, with the button pushed down to clear the Audi rings. */
   .hero-logo { display: none; }
-  .hero .btn { margin-top: 100px; }
+  .hero .btn { margin-top: 120px; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }
 }

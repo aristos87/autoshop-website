@@ -37,6 +37,7 @@
     <a href="#tuning" data-i18n="navTuning">Tuning</a>
     <a href="#imports" data-i18n="navImports">Εισαγωγές</a>
     <a href="#motorsport" data-i18n="navMotorsport">Motorsport</a>
+    <a href="#about" data-i18n="navAbout">Σχετικά</a>
     <a href="#contact" data-i18n="navContact">Επικοινωνία</a>
   </nav>
   <div class="header-actions">
@@ -55,7 +56,6 @@
       <h1>Auto<span>Shop</span></h1>
       <p class="lead" data-i18n="heroLead">Ανταλλακτικά, tuning και εισαγωγές αυτοκινήτων, με εξειδίκευση στα μοντέλα του Volkswagen Group.</p>
       <a class="btn btn-red" href="#contact" data-i18n="heroCta1">Επικοινωνία</a>
-      <a class="btn btn-line" href="#services" data-i18n="heroCta2">Οι υπηρεσίες μας</a>
     </div>
   </section>
 
@@ -109,12 +109,9 @@
 
   <section id="tuning" class="motor">
     <div class="wrap">
-      <div class="photo-header photo-header--contained" style="background-image:url('images/tuning/vcds-diagnostics.jpg')">
-        <div class="photo-header-text">
-          <h2 data-i18n-html="tuningTitle">Tuning με <span class="red">REVO</span></h2>
-          <p class="section-intro" data-i18n="tuningIntro">Ως εξουσιοδοτημένος αντιπρόσωπος REVO, αναβαθμίζουμε την απόδοση του αυτοκινήτου σου με πιστοποιημένα προγράμματα.</p>
-        </div>
-      </div>
+      <h2 data-i18n-html="tuningTitle">Tuning με <span class="red">REVO</span></h2>
+      <p class="section-intro" data-i18n="tuningIntro">Ως εξουσιοδοτημένος αντιπρόσωπος REVO, αναβαθμίζουμε την απόδοση του αυτοκινήτου σου με πιστοποιημένα προγράμματα.</p>
+      <div class="photo-header photo-header--contained" style="background-image:url('images/tuning/vcds-diagnostics.jpg')"></div>
       <img class="revo-logo-badge reveal" src="images/brands/revo.png" alt="REVO – Εξουσιοδοτημένος Αντιπρόσωπος">
       <div class="story-carousel" id="tuningCarousel">
         <button class="story-nav prev" type="button" aria-label="Previous">‹</button>
@@ -163,6 +160,15 @@
     </div>
   </section>
 
+  <section id="about" class="alt">
+    <div class="wrap">
+      <h2 data-i18n="aboutTitle">Η ιστορία μας ξεκινά στις αρχές της δεκαετίας του '90.</h2>
+      <p class="section-intro" data-i18n="aboutP1">Με περισσότερα από 30 χρόνια εμπειρίας στον χώρο του αυτοκινήτου, η αγάπη μας για την αυτοκίνηση, την τεχνολογία και τις υψηλές επιδόσεις αποτελεί τη βάση της φιλοσοφίας μας.</p>
+      <p class="section-intro" data-i18n="aboutP2">Η δραστηριότητά μας ξεκίνησε από τον χώρο των ανταλλακτικών και του tuning, με ιδιαίτερη εξειδίκευση στα οχήματα του ομίλου Volkswagen: Audi, VW, SEAT και ŠKODA. Με την πάροδο των χρόνων, εξελιχθήκαμε σε μια ολοκληρωμένη επιχείρηση που συνδυάζει την προμήθεια ανταλλακτικών, τις βελτιώσεις, την εισαγωγή αυτοκινήτων και τις υπηρεσίες συντήρησης και φροντίδας.</p>
+      <p class="closing-line" data-i18n="aboutClosing">AUTO SHOP. Driven by Experience. Defined by Performance.</p>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap contact-grid reveal">
       <div>
@@ -193,7 +199,7 @@
   var T = {
     el: {
       topAddress: "Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452",
-      navServices: "Υπηρεσίες", navParts: "Ανταλλακτικά", navTuning: "Tuning", navImports: "Εισαγωγές", navMotorsport: "Motorsport", navContact: "Επικοινωνία",
+      navServices: "Υπηρεσίες", navParts: "Ανταλλακτικά", navTuning: "Tuning", navImports: "Εισαγωγές", navMotorsport: "Motorsport", navAbout: "Σχετικά", navContact: "Επικοινωνία",
       heroEyebrow: "Ανταλλακτικά · Πωλήσεις Αυτοκινήτων",
       heroLead: "Ανταλλακτικά, tuning και εισαγωγές αυτοκινήτων, με εξειδίκευση στα μοντέλα του Volkswagen Group.",
       heroCta1: "Επικοινωνία", heroCta2: "Οι υπηρεσίες μας",
@@ -221,12 +227,16 @@
       lblAddress: "Διεύθυνση", addressValue: "Κυριακού Ευσταθιάδη 32, Αργυρούπολη 16452",
       lblPhone: "Τηλέφωνο", lblMobile: "Κινητό", lblFax: "Φαξ", lblEmail: "Email",
       lblHours: "Ωράριο", hoursValue: "Δευτέρα–Παρασκευή 9:00 π.μ.–8:00 μ.μ.<br>Σάββατο 9:00 π.μ.–3:00 μ.μ.<br>Κυριακή Κλειστά",
+      aboutTitle: "Η ιστορία μας ξεκινά στις αρχές της δεκαετίας του '90.",
+      aboutP1: "Με περισσότερα από 30 χρόνια εμπειρίας στον χώρο του αυτοκινήτου, η αγάπη μας για την αυτοκίνηση, την τεχνολογία και τις υψηλές επιδόσεις αποτελεί τη βάση της φιλοσοφίας μας.",
+      aboutP2: "Η δραστηριότητά μας ξεκίνησε από τον χώρο των ανταλλακτικών και του tuning, με ιδιαίτερη εξειδίκευση στα οχήματα του ομίλου Volkswagen: Audi, VW, SEAT και ŠKODA. Με την πάροδο των χρόνων, εξελιχθήκαμε σε μια ολοκληρωμένη επιχείρηση που συνδυάζει την προμήθεια ανταλλακτικών, τις βελτιώσεις, την εισαγωγή αυτοκινήτων και τις υπηρεσίες συντήρησης και φροντίδας.",
+      aboutClosing: "AUTO SHOP. Driven by Experience. Defined by Performance.",
       footerOwner: "© 2026 Auto Shop · Ευστάθιος Λιάγκουρας",
       langButton: "EN", pageTitle: "Auto Shop | Ανταλλακτικά & Πωλήσεις Αυτοκινήτων"
     },
     en: {
       topAddress: "Kyriakou Efstathiadi 32, Argyroupoli 16452, Athens",
-      navServices: "Services", navParts: "Spare Parts", navTuning: "Tuning", navImports: "Imports", navMotorsport: "Motorsport", navContact: "Contact",
+      navServices: "Services", navParts: "Spare Parts", navTuning: "Tuning", navImports: "Imports", navMotorsport: "Motorsport", navAbout: "About", navContact: "Contact",
       heroEyebrow: "Spare Parts · Car Sales",
       heroLead: "Spare parts, tuning and car imports, specialising in Volkswagen Group models.",
       heroCta1: "Contact us", heroCta2: "Our services",
@@ -254,6 +264,10 @@
       lblAddress: "Address", addressValue: "Kyriakou Efstathiadi 32, Argyroupoli 16452, Athens",
       lblPhone: "Phone", lblMobile: "Mobile", lblFax: "Fax", lblEmail: "Email",
       lblHours: "Opening hours", hoursValue: "Monday–Friday 9:00 am–8:00 pm<br>Saturday 9:00 am–3:00 pm<br>Sunday Closed",
+      aboutTitle: "Our story begins in the early 1990s.",
+      aboutP1: "With more than 30 years of experience in the automotive world, our love for cars, technology and high performance is the foundation of our philosophy.",
+      aboutP2: "Our business started in spare parts and tuning, with particular expertise in vehicles of the Volkswagen Group: Audi, VW, SEAT and ŠKODA. Over the years, we have grown into a complete business that combines spare parts supply, performance upgrades, car imports, and maintenance and care services.",
+      aboutClosing: "AUTO SHOP. Driven by Experience. Defined by Performance.",
       footerOwner: "© 2026 Auto Shop · Evstathios Liagkouras",
       langButton: "EL", pageTitle: "Auto Shop | Spare Parts & Car Sales, Athens"
     }
@@ -352,16 +366,7 @@
           line: "Εσύ επιλέγεις το αυτοκίνητο. Εμείς αναλαμβάνουμε τη διαδρομή.",
           ctaText: "Ζήτησε προσφορά εισαγωγής",
           ctaHref: "#contact"
-        },
-        photos: [
-          { src: "images/imports/trip-germany-01.jpg", alt: "Παραλαβή αυτοκινήτων στη Γερμανία" },
-          { src: "images/imports/trip-02-refuel.jpg", alt: "Ανεφοδιασμός στη Γερμανία" },
-          { src: "images/imports/trip-03-audi-night.jpg", alt: "Αυτοκίνητο στη Γερμανία" },
-          { src: "images/imports/trip-05-transporter.jpg", alt: "VW Transporter σε έκθεση στη Γερμανία" },
-          { src: "images/imports/trip-06-q3.jpg", alt: "Audi Q3 σε έκθεση στη Γερμανία" },
-          { src: "images/imports/trip-07-pickup.jpg", alt: "Παραλαβή αυτοκινήτων" }
-        ],
-        galleryCount: 6
+        }
       }],
       en: [{
         lead: "We search for and bring the car you really want, based on your needs and budget. With access to the German market and the rest of Europe, we handle every stage of the import, from the first search to delivery and registration in Greece.",
@@ -388,16 +393,7 @@
           line: "You choose the car. We handle the journey.",
           ctaText: "Request an import quote",
           ctaHref: "#contact"
-        },
-        photos: [
-          { src: "images/imports/trip-germany-01.jpg", alt: "Picking up cars in Germany" },
-          { src: "images/imports/trip-02-refuel.jpg", alt: "Refuelling in Germany" },
-          { src: "images/imports/trip-03-audi-night.jpg", alt: "A car in Germany" },
-          { src: "images/imports/trip-05-transporter.jpg", alt: "VW Transporter at a dealership in Germany" },
-          { src: "images/imports/trip-06-q3.jpg", alt: "Audi Q3 at a dealership in Germany" },
-          { src: "images/imports/trip-07-pickup.jpg", alt: "Picking up vehicles" }
-        ],
-        galleryCount: 6
+        }
       }]
     }
   };

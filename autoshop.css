@@ -372,7 +372,8 @@ h2 .red { color: var(--red); }
 /* closing statement + CTA */
 .story-closing { margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); max-width: 760px; }
 .story-closing p { color: #d8d8d8; margin: 0 0 10px; }
-.story-closing .closing-line { font-weight: 800; font-style: italic; color: var(--white); margin: 14px 0 20px; }
+.closing-line { font-weight: 800; font-style: italic; margin: 14px 0 20px; }
+.motor .closing-line, .story-closing .closing-line { color: var(--white); }
 .story-cta { display: inline-block; background: var(--red); color: var(--white); font-weight: 700; padding: 13px 24px; text-decoration: none; }
 .story-cta:hover { background: var(--red-dark); }
 .gallery-title { font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 16px; color: #d8d8d8; }

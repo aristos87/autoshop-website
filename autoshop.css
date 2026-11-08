@@ -132,6 +132,7 @@ h2::before {
   background: var(--black);
   color: var(--white);
   padding: 32px 0 40px;
+  margin-top: -1px;
   overflow: hidden;
   /* Audi RS6 studio photo, darkened with a gradient so the headline stays readable */
   background-image:

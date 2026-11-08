@@ -177,6 +177,7 @@ h2::before {
 .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 13px; color: #ffb3b5; font-weight: 700; margin: 0 0 12px; }
 .hero-logo { height: clamp(48px, 9vw, 92px); width: auto; margin: 0 0 16px; }
 .hero p.lead { font-size: clamp(17px, 2.4vw, 20px); max-width: 560px; margin: 0 0 28px; color: #e8e8e8; }
+.hero-ring-peek { display: none; }
 .btn { display: inline-block; padding: 14px 24px; font-weight: 700; text-decoration: none; margin: 0 10px 10px 0; }
 .btn-red { background: var(--red); color: var(--white); }
 .btn-red:hover { background: var(--red-dark); }
@@ -531,11 +532,22 @@ footer .todo { color: #ffb3b5; }
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   /* logo already shown top-left in the header on mobile, so the hero drops
-     its own copy. Keep the text block tight at the top, then push the CTA
-     down with space above it so the car is visible in that gap. */
+     its own copy. */
   .hero-logo { display: none; }
-  .hero .lead { margin-bottom: 0; }
-  .hero .btn { margin-top: 120px; }
+  .hero .lead { margin-bottom: 20px; }
+  /* a dedicated strip showing the Audi rings/grille, independent of the
+     hero's overall height (percentage-based background-position on the
+     whole .hero would drift as content height changes, hiding the rings
+     behind the button or behind a flat black gradient instead). */
+  .hero-ring-peek {
+    display: block;
+    height: 150px;
+    margin: 0 0 20px;
+    background-image: url("images/hero/rs6-studio.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }
 }

@@ -520,7 +520,7 @@ footer .todo { color: #ffb3b5; }
        Letterbox bars are invisible here since the photo's own backdrop is
        black, same as the hero background. */
     background-size: 100% 100%, 100% 100%, contain;
-    background-position: center, center, center bottom;
+    background-position: center, center, center 78%;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }

@@ -526,11 +526,12 @@ footer .todo { color: #ffb3b5; }
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
-  /* logo already shown top-left in the header on mobile; the hero repeats it,
-     so drop it here, but keep part of the black space it occupied instead of
-     letting everything below jump straight up. */
+  /* logo already shown top-left in the header on mobile, so the hero drops
+     its own copy. Keep the text block tight at the top, then push the CTA
+     down with space above it so the car is visible in that gap. */
   .hero-logo { display: none; }
-  .eyebrow { margin-bottom: 36px; }
+  .hero .lead { margin-bottom: 0; }
+  .hero .btn { margin-top: 56px; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }
 }

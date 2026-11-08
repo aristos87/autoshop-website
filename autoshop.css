@@ -542,10 +542,11 @@ footer .todo { color: #ffb3b5; }
   .hero-ring-peek {
     display: block;
     height: 150px;
-    margin: 0 0 20px;
+    margin: 0 0 28px;
+    border-radius: 4px;
     background-image: url("images/hero/rs6-studio.jpg");
     background-size: cover;
-    background-position: center bottom;
+    background-position: center 90%;
     background-repeat: no-repeat;
   }
   section { padding: 44px 0; }

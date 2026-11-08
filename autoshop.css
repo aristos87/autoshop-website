@@ -37,7 +37,7 @@ a { color: inherit; }
 
 /* Top bar */
 .topbar { background: var(--black); color: var(--white); font-size: 14px; }
-.topbar .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; padding: 8px 0; }
+.topbar .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; padding: 5px 0; }
 .topbar a { text-decoration: none; }
 
 /* Header */
@@ -50,7 +50,7 @@ header.site {
   transition: box-shadow 0.25s ease, padding 0.25s ease;
 }
 header.site.is-scrolled { box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
-header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 0; }
 .wordmark { font-weight: 900; font-style: italic; font-size: 26px; text-decoration: none; letter-spacing: -0.5px; }
 .wordmark span { color: var(--red); }
 .brand-block { display: flex; flex-direction: column; line-height: 1; text-decoration: none; gap: 3px; }
@@ -131,7 +131,7 @@ h2::before {
   position: relative;
   background: var(--black);
   color: var(--white);
-  padding: 48px 0 64px;
+  padding: 32px 0 40px;
   overflow: hidden;
   /* Audi RS6 studio photo, darkened with a gradient so the headline stays readable */
   background-image:
@@ -200,10 +200,11 @@ h2::before {
 
 /* Sections */
 section { padding: 48px 0; }
+#services { padding-top: 32px; }
 section.alt { background: var(--grey); }
 h2 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 900; font-style: italic; margin: 0 0 12px; line-height: 1.1; }
 h2 .red { color: var(--red); }
-.section-intro { color: var(--muted); max-width: 640px; margin: 0 0 24px; }
+.section-intro { color: var(--muted); max-width: 640px; margin: 0 0 16px; }
 
 .section-split { margin-top: 32px; padding-top: 28px; }
 

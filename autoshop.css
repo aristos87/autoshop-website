@@ -518,23 +518,29 @@ footer .todo { color: #ffb3b5; }
   .topbar { display: none; }
   .section-split { margin-top: 28px; padding-top: 24px; }
   .hero {
-    padding: 40px 0 64px;
+    padding: 40px 0 32px;
     /* "cover" kept guessing wrong crops on mobile across several attempts.
        Switching the photo layer (only) to "contain" guarantees the whole
        photo, including the Audi rings, is always fully visible, never cropped.
-       The two gradient layers keep filling the box as before (100% 100%).
-       Letterbox bars are invisible here since the photo's own backdrop is
-       black, same as the hero background. */
+       The two gradient layers keep filling the box as before (100% 100%). */
     background-size: 100% 100%, 100% 100%, contain;
-    background-position: center, center, center 78%;
+    /* top-anchored: with the shorter hero (after dropping the duplicate
+       logo), the box became shorter than the photo's contained height, so
+       "contain" was scaling by height with zero vertical slack left -
+       background-position-Y had no effect at all, which is why the rings
+       stayed pinned under the button no matter what we set here. Anchoring
+       to the top and instead controlling the box height via the CTA's
+       margin below (which restores vertical slack) is what actually moves
+       the rings into view. */
+    background-position: center, center, center top;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   /* logo already shown top-left in the header on mobile, so the hero drops
      its own copy; the car photo stays the full translucent background as
-     before, just with a bit more breathing room before the button. */
+     before, with the button pushed down to clear the Audi rings. */
   .hero-logo { display: none; }
-  .hero .lead { margin-bottom: 40px; }
+  .hero .btn { margin-top: 100px; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }
 }

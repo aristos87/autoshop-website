@@ -508,7 +508,14 @@ footer .todo { color: #ffb3b5; }
   header.site .wrap { flex-wrap: wrap; }
   .topbar { display: none; }
   .section-split { margin-top: 28px; padding-top: 24px; }
-  .hero { padding: 40px 0 150px; background-position: 30% 74%; }
+  .hero {
+    padding: 40px 0 170px;
+    /* Force width-based scaling even though the mobile hero is tall and narrow;
+       plain "cover" would otherwise switch to height-based scaling here, which
+       makes background-position-Y do nothing (that's why the last attempt had no effect) */
+    background-size: 230% auto;
+    background-position: 30% 0%;
+  }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }

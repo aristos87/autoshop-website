@@ -361,7 +361,7 @@ h2 .red { color: var(--red); }
 }
 
 /* story banner + article + gallery (used inside story-carousel slides) */
-.motor-banner { width: 100%; max-width: 480px; border: 1px solid #2a2a2a; margin-bottom: 36px; }
+.motor-banner { width: 100%; max-width: 620px; border: 1px solid #2a2a2a; margin-bottom: 36px; }
 /* real trip/product photos sit smaller and framed, instead of dominating the section like a graphic hero */
 .motor-banner.photo {
   width: auto; max-width: 420px;

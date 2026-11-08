@@ -280,9 +280,6 @@ h2 .red { color: var(--red); }
 /* Imports photo was re-cropped to remove excess sky, so it needs a shorter band
    than the default (the Motorsport photo keeps the default, it wasn't affected) */
 #imports .photo-header { min-height: clamp(300px, 34vw, 700px); }
-/* Tuning's photo has its subject (the laptop screen) lower in frame than Imports' photo,
-   so it needs a center anchor instead of the default top anchor, or it gets cropped out */
-#tuning .photo-header { background-position: center center; }
 .photo-header h2, .photo-header .section-intro { margin-bottom: 0; }
 .photo-header h2 { margin-bottom: 10px; }
 

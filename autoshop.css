@@ -38,7 +38,9 @@ a { color: inherit; }
 
 /* Header */
 header.site {
-  background: var(--white);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 4px solid var(--red);
   position: sticky; top: 0; z-index: 10;
   transition: box-shadow 0.25s ease, padding 0.25s ease;
@@ -524,6 +526,10 @@ footer .todo { color: #ffb3b5; }
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
+  /* logo already shown top-left in the header on mobile; the hero repeats it,
+     so drop it here and let the CTA move up into the freed space, showing
+     more of the car behind. */
+  .hero-logo { display: none; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }
 }

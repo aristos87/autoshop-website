@@ -498,7 +498,7 @@ footer .todo { color: #ffb3b5; }
   header.site .wrap { flex-wrap: wrap; }
   .topbar { display: none; }
   .section-split { margin-top: 28px; padding-top: 24px; }
-  .hero { padding: 40px 0 64px; background-position: 30% 62%; }
+  .hero { padding: 40px 0 150px; background-position: 30% 74%; }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }

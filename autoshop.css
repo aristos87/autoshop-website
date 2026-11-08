@@ -296,6 +296,16 @@ h2 .red { color: var(--red); }
 
 .revo-logo-badge { background: var(--white); padding: 14px 24px; height: 72px; width: auto; margin: 4px 0 28px; }
 
+.cargr-logo-badge {
+  display: inline-block;
+  margin: 4px 0 28px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cargr-logo-badge img { height: 72px; width: auto; display: block; }
+.cargr-logo-badge:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,0.35); }
+
 /* Tuning: a steel-blue glow accent, so three dark sections in a row each read differently */
 #tuning::after {
   content: "";

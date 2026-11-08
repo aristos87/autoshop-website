@@ -527,9 +527,10 @@ footer .todo { color: #ffb3b5; }
   }
   .hero::after { width: 30%; right: -80px; opacity: 0.5; }
   /* logo already shown top-left in the header on mobile; the hero repeats it,
-     so drop it here and let the CTA move up into the freed space, showing
-     more of the car behind. */
+     so drop it here, but keep part of the black space it occupied instead of
+     letting everything below jump straight up. */
   .hero-logo { display: none; }
+  .eyebrow { margin-bottom: 36px; }
   section { padding: 44px 0; }
   .btn { display: block; text-align: center; margin: 0 0 12px; }
 }

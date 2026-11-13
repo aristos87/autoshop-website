@@ -144,7 +144,10 @@
   <div class="seam-line" aria-hidden="true"></div>
 
   <section id="imports" class="motor">
-    <div class="photo-header" style="background-image:url('images/imports/trip-germany-01.jpg')">
+    <!-- TODO: real trip photo removed on purpose (2026-11-13), pending a replacement from the owner.
+         Put it back by restoring style="background-image:url('images/imports/trip-germany-01.jpg')" below,
+         or swap in the new file once it's provided. Plain black placeholder in the meantime. -->
+    <div class="photo-header">
       <div class="wrap">
         <h2 data-i18n-html="importsTitle">Εισαγωγές Αυτοκινήτων από <span class="red">Γερμανία και Ευρώπη</span></h2>
         <p class="section-intro" data-i18n="importsIntro">Το αυτοκίνητο που θέλεις. Χωρίς το άγχος της διαδικασίας.</p>
@@ -610,6 +613,17 @@
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  // keep anchor links (nav, "read more" etc.) from landing with the section
+  // title hidden under the sticky header: scroll-margin-top needs to match
+  // the header's real rendered height, which differs by breakpoint (topbar
+  // shows/hides) and has changed a few times already, so it's measured live
+  // instead of hard-coded.
+  function updateHeaderHeightVar() {
+    document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+  }
+  updateHeaderHeightVar();
+  window.addEventListener("resize", updateHeaderHeightVar);
 
   // mobile hamburger nav
   var navToggle = document.getElementById("navToggle");

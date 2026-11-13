@@ -22,6 +22,10 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+/* jump-links (nav, in-page CTAs) land below the sticky header instead of
+   under it; --header-h is measured live in JS since the header's height
+   differs by breakpoint and has changed a few times already */
+section[id] { scroll-margin-top: calc(var(--header-h, 110px) + 14px); }
 body {
   margin: 0;
   overflow-x: clip;
